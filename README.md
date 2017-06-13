@@ -1,5 +1,5 @@
-# ![](./hhgtpd-logo.png) HHGDAC 
-Hitchhikers Guide to Docu-as-Code 
+# ![](./hhgdac-logo.png) HHGDAC 
+**Hitchhikers Guide to Docu-as-Code** 
 
 Source und Infos zur JavaMagazin-Kolumne von [R.D. Müller]() und 
 [G.Starke](http://gernotstarke.de)
