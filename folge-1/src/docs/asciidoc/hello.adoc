@@ -1,0 +1,20 @@
+:source-highlighter: coderay
+
+== Ein erstes Asciidoc(ument)
+Absätze können
+beliebig viele
+Zeilenumbrüche
+enthalten.
+
+Erst nach einer Leerzeile beginnt ein neuer Absatz.
+
+=== Überschriften
+Textformatierungen, Aufzählungen (Listen)
+
+* kennen Sie von Wikis oder Markdown:
+* Formate wie *fett*, _kursiv_
+* Auch Links sind einfach: http://javamagazin.de[JavaMagazin].
+
+.Code-Highlighting
+[source,groovy]
+10.times { println "Hello, AsciiDoc!" }
