@@ -36,6 +36,3 @@ Falls Sie Gradle bereits installiert haben, geht's auch so:
 
 Das Ergebnis, die Datei `hello.html`, wird ins Verzeichnis
 `./build/asciidoc/html5` generiert.
-
-
-=== Folge-2: Modularisierung
