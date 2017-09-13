@@ -1,0 +1,19 @@
+plugins {
+  id "org.asciidoctor.convert" version "1.5.3"
+  id "com.github.ben-manes.versions" version "0.15.0"
+}
+apply plugin: 'groovy'
+
+dependencies {
+  testCompile(
+          'junit:junit:4.12',
+          'org.codehaus.groovy:groovy-all:2.4.9',
+          'org.spockframework:spock-core:1.1-groovy-2.4'
+  )
+}
+asciidoctor {
+  dependsOn test
+
+  attributes \
+        'sourceDir': "$projectDir/src/"
+}

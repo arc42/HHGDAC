@@ -36,3 +36,33 @@ Falls Sie Gradle bereits installiert haben, geht's auch so:
 
 Das Ergebnis, die Datei `hello.html`, wird ins Verzeichnis
 `./build/asciidoc/html5` generiert.
+
+=== Folge-2: Modulare Dokumentation
+
+Wir zeigen, wie Sie Dokumentation auf verschiedene Teile ("Module")
+aufteilen können, und diese in AsciiDoc durch 'include' Statements
+wieder zusammenfügen.
+
+Auch der Code dieser Folge liegt wieder in einem eigenen Unterverzeichnis:
+
+    cd folge-2
+    ./gradlew asciidoctor
+
+Falls Sie Gradle bereits installiert haben, geht's auch so:
+
+    cd folge-2
+    gradle asciidoctor
+
+
+
+=== Folge-3: Verschiedene Ausgabeformate
+(noch nicht erschienen)
+
+=== Folge-4: AsciiDoc Cheatsheet
+(noch nicht erschienen)
+
+In dieser Folge zeigen wir diejenigen AsciiDoc-Features, die unserer Meinung
+nach für praktische Architekturdokumentation (etwa nach arc42) nützlich sind.
+
+Wir stellen diese Features in einer Art _Cheat-Sheet_ dar, bei dem Sie die jeweiligen Features
+immer direkt mit den daraus erzeugten Ergebnissen sehen können.
