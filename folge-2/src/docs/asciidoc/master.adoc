@@ -1,0 +1,12 @@
+:source-highlighter: coderay
+:imagesdir: images
+
+== Dies ist das Hauptdokument
+
+Durch verschiedene `include`-Anweisungen modularisieren wir die Dokumentation:
+
+include::kapitel/kapitel-1.adoc[leveloffset=+1]
+
+include::kapitel/kapitel-2.adoc[leveloffset=+1]
+
+
