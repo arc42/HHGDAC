@@ -1,0 +1,77 @@
+// part of the AsciiDoc Architecture Documentation 101
+// by R.D. Mueller and Gernot Starke
+
+=== Links and References
+
+=== Hyperlinks
+
+==== Simple Links
+Just write the http://docs.arc42.org URL - it will be magically converted
+into a hyperlink.
+
+==== Named (labelled) Links
+
+----
+Hyperlink with https://github.com/aim42/aim42/issues/20[nice name]
+----
+
+Hyperlink with https://github.com/aim42/aim42/issues/20[nice name]
+
+
+=== Cross-References
+Cross references are links within documents.
+
+----
+<<some-anchor,explanation>> creates a link to the explanation of some-anchor.
+
+...
+
+[[some-anchor]]
+Here is the explanation...
+----
+
+<<some-anchor,explanation>> creates a link to the explanation of some-anchor.
+
+...
+
+[[some-anchor]]
+Here is the explanation...
+
+=== Automatic Anchors for Headings
+
+----
+... for example the link to <<_cross_references, Cross-References>> above.
+----
+
+TIP: Headings are automatically converted
+to anchors, for example the link to <<_cross_references, Cross-References>> above.
+
+
+==== Referencing lists entries
+
+You can use the cross-reference a specific item in a list,
+e.g. a glossary entry (see <<bar-label,bar>> below.):
+
+----
+[horizontal]
+[[bar-label]] bar:: Strange name for anything,.
+.foo-label
+foo:: Common name for nothing.
+----
+
+[horizontal]
+[[bar-label]] bar:: Strange name for anything,.
+.foo-label
+foo:: Common name for nothing.
+
+
+
+==== Links to files/artifacts
+
+Link to files / artifacts in new browser window/tab:
+
+----
+link:./docs/readme-directory.md[readme]
+----
+
+link:./docs/readme-directory.md[readme]

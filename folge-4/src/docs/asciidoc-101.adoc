@@ -1,0 +1,131 @@
+// header file for HHGDAC AsciiDoc CheatSheet
+//
+= HHGDAC AsciiDoc Cheatsheet
+:toc: right
+:imagesdir: ./images
+
+
+Here you find asciidoc features that we consider useful for software architecture
+and similar documentation. Originally this list had been compiled for the
+http://aim42.org[aim42] (architecture improvement method) project, later enhanced
+by Ralf D. Müller and Gernot Starke for their
+https://github.com/arc42/hhgdac[Hitchhikers Guide to Docs-as-Code]
+article series.
+
+NOTE: http://powerman.name/doc/asciidoc[Alex Efros] has created an extensive and
+elaborate AsciiDoc cheatsheet, which you might prefer to ours...
+
+Thanx to Sarah White (@carbonfray)
+and Dan Allen (@mojavelinux) for writing
+the awesome http://asciidoctor.org/docs/user-manual[AsciiDoc User Manual].
+
+
+== Text Basics
+
+
+=== Normal, Bold, Italics
+
+Format text as normal, _italic_, *bold*, +mono+. ``double quoted'', `single quoted'.
+
+=== Small and Large
+
+Sometimes it can be useful to write [small]#smaller text#,
+sometimes [big]#big# is appropriate.
+
+=== Verbatim
+
+----
+> cd folge-4
+> gradle asciicoctor
+----
+
+== Heading Level 2
+
+=== Heading Level 2
+Some Text.
+
+== Lists and Enumerations
+
+* first entry
+* one more
+
+1. number one
+2. number two
+
+=== Multi-line li
+
+* A list-entry can have multiple lines.
++
+Use the continuation '+'...
++
+So you can write entries of arbitrary length.
+
+=== Labelled lists (e.g. glossary)
+
+CPU:: Brain inside computer.
+DEV:: Brain in front of computer.
+
+== Links
+=== Hyperlinks
+
+Just write http://docs.arc42.org,
+will be converted into a hyperlink.
+
+You might give links a
+https://github.com/aim42/aim42/issues/20[nice name]
+
+
+=== Cross-References
+
+<<some-anchor,explanation>> creates a link to the explanation of some-anchor.
+
+
+[[some-anchor]]
+Here is the explanation...
+
+
+
+// bold/italics, lists/glossaries etc.
+include::topics/basic-formating.adoc[]
+
+// links, references
+include::topics/links.adoc[]
+
+// images and diagrams
+include::topics/images.adoc[]
+
+// warnings, tips etc (aka "admonitions")
+include::topics/admonitions.adoc[]
+
+// tables
+include::topics/tables.adoc[]
+
+
+
+== Advanced Features
+
+=== Attributes
+Some attributes are useful, e.g.
+----
+{docdate}
+----
+will insert the last modification data (here: {docdate})
+
+
+=== Footnotes
+In case you need a footnote.footnote:[the textis usually rendered at the end of the document.]
+- that's easy:
+
+----
+... need a footnote.footnote:[the text of this footnote, usually rendered at the end of the document.]
+----
+
+
+
+[TIP]
+--
+We found the following information especially helpful when writing AsciiDoc
+
+* http://asciidoctor.org/docs/asciidoc-writers-guide[AsciiDoctor Writers Guide]
+* https://atom.io/packages/asciidoc-preview[AsciiDoc Preview] for Atom editor
+--

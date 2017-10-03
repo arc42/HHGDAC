@@ -1,0 +1,52 @@
+// part of the AsciiDoc Architecture Documentation 101
+// by R.D. Mueller and Gernot Starke
+
+
+== Warnings, Notes etc.
+
+
+Asciidoc provides special annotations (called _admonitions_)
+for such cases, that render nicely:
+
+----
+NOTE: Admonition paragraphs call attention to special words of advice
+
+WARNING: a warning
+
+CAUTION: be careful
+
+IMPORTANT: must be really worth reading
+
+TIP: maybe some practice report
+----
+
+NOTE: Admonition paragraphs call attention to special words of advice
+
+WARNING: a warning
+
+CAUTION: be careful
+
+IMPORTANT: must be really worth reading
+
+TIP: maybe some practice report
+
+----
+[TIP]
+--
+Multi-line admonitions blocks need special treatment:
+
+they need a block-masquerading (e.g. by "--" at the beginning and end.
+
+The result is rendered nicely.
+--
+----
+renders as follows:
+
+[TIP]
+--
+Multi-line admonitions blocks need special treatment:
+
+they need a block-masquerading (e.g. by "--" at the beginning and end.
+
+The result is rendered nicely.
+--

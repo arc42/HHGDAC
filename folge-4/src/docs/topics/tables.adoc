@@ -1,0 +1,111 @@
+// part of the AsciiDoc Architecture Documentation 101
+// by R.D. Mueller and Gernot Starke
+
+== Tables
+AsciiDoc provides simple yet powerful tables.
+
+=== Simple tables
+----
+|===
+<1>
+|column 1, row 1 |column 2, row 1 |column 3, row 1
+<2>
+|column 1, row 2 |column 2, row 2 |column 3, row 2
+
+|===
+----
+<1> empty line means "no header"
+<2> blank lines between rows are optional
+|===
+
+|column 1, row 1 |column 2, row 1 |column 3, row 1
+
+|column 1, row 2 |column 2, row 2 |column 3, row 2
+
+|===
+
+Another way to write tables: write columns in
+separate lines of text...
+
+----
+[cols=3]<1>
+|===
+|column 1, row 1
+|column 2, row 1
+|column 3, row 1
+
+|column 1, row 2 |column 2, row 2 |column 3, row 2
+|===
+----
+<1> Then you need to specify the nr-of-columns
+
+[cols=3]
+|===
+|column 1, row 1
+|column 2, row 1
+|column 3, row 1
+
+|column 1, row 2 |column 2, row 2 |column 3, row 2
+|===
+
+
+
+=== Tables with Header
+----
+[cols=3,options="header"]
+|===
+|Header-1 | Header-2 | Header-3 <1>
+|c1r1 |c2r1 |c3r1
+|c1r2 |c2r2 |c3r2
+|===
+----
+<1> The first row is used as table header
+
+
+[cols=3,options="header"]
+|===
+|Header-1 | Header-2 | Header-3
+|c1r1 |c2r1 |c3r1
+| c1r2 | c2r2 | c3r2
+|===
+
+Btw - you can create tables with footer in the same
+manner...
+
+=== Column Size
+
+You can specify the (relative) width of a column.
+Its value can be a proportional integer (the default is 1),
+or a percentage (1 to 99).
+
+----
+[cols="1,2,4"]<1>
+|===
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+|Cell in column 3, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===
+----
+<1> second column has double width, third column four-fold.
+
+[cols="1,2,4"]
+|===
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+|Cell in column 3, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===
+
+=== Complicated Tables
+You might nest tables, combine rows and/or columns,
+or perform other complicated things - but these features
+are usually not required in our kinds of documents...
+See the http://asciidoctor.org/docs/user-manual/#tables[AsciiDoc User Guide]
+for additional info.

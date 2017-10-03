@@ -54,9 +54,9 @@ Falls Sie Gradle bereits installiert haben, geht's auch so:
     gradle asciidoctor
 
 
-
 === Folge-3: Verschiedene Ausgabeformate
-(noch nicht erschienen)
+(in Vorbereitung beim Verlag)
+
 
 === Folge-4: AsciiDoc Cheatsheet
 (noch nicht erschienen)
@@ -66,3 +66,7 @@ nach für praktische Architekturdokumentation (etwa nach arc42) nützlich sind.
 
 Wir stellen diese Features in einer Art _Cheat-Sheet_ dar, bei dem Sie die jeweiligen Features
 immer direkt mit den daraus erzeugten Ergebnissen sehen können.
+
+
+=== Folge-5: Diagramme
+(in Arbeit)

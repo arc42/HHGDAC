@@ -1,0 +1,156 @@
+// part of the AsciiDoc Architecture Documentation 101
+// by R.D. Mueller and Gernot Starke
+
+== Basic Formatting
+
+You'll see the AsciiDoc plain text, followed by the rendered results.
+
+=== Text and Typesetting
+
+----
+normal, _italic_, *bold*, +mono+. ``double quoted'', `single quoted'.
+----
+
+normal, _italic_, *bold*, +mono+. ``double quoted'', `single quoted'.
+
+
+----
+... useful to write [small]#smaller text#.
+----
+
+Sometimes it can be useful to write [small]#smaller text#.
+
+----
+[red]#red text# +
+[yellow-background]#on yellow# +
+[big]#large# +
+[red yellow-background big]*all bold*
+----
+
+[red]#red text# +
+[yellow-background]#on yellow# +
+[big]#large# +
+[red yellow-background big]*all bold*
+
+
+
+
+=== Headings
+----
+== Heading Level 1
+Text.
+
+=== Heading Level 2
+Text.
+
+==== Heading Level 3
+Text.
+----
+
+****
+[discrete]
+== Heading Level 1
+Text.
+
+[discrete]
+=== Heading Level 2
+Text.
+
+[discrete]
+==== Heading Level 3
+Text.
+
+****
+
+Headings are just headings as described in the AsciiDoctor's Manual entry on
+**http://asciidoctor.org/docs/user-manual/#sections[sections]**.
+AsciiDoctor actually treats headings
+_semantically_. This means that a level 2 section should come within a section 1
+section and be followed by a level three section, _not_ by a level four section.
+
+Otherwise there will be a compile warning in the build like this
+
+----
+:asciidoctor
+asciidoctor: WARNING: appendices/asciidoc-help.adoc: line 18: section title out of sequence: expected level 2, got level 3
+----
+
+
+=== Lists
+
+Simple bullet list:
+
+----
+* first entry
+* one more
+----
+
+* first entry
+* one more
+
+Bullet list with square bullets:
+
+----
+[square]
+* another
+* and more
+----
+
+[square]
+* another
+* and more
+
+==== Multi-line lists
+
+----
+* A list-entry in AsciiDoc can have multiple lines.
++
+Use the continuation '+'...
++
+So you can write entries of arbitrary length.
+
+----
+* A list-entry in AsciiDoc can have multiple lines.
++
+Use the continuation '+'...
++
+So you can write entries of arbitrary length.
+
+
+
+==== Labelled lists (e.g. glossary)
+----
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage.
+RAM:: Temporarily stores information the CPU uses during operation.
+----
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage.
+RAM:: Temporarily stores information the CPU uses during operation.
+
+
+You might want these items to appear in single lines:
+
+----
+[horizontal]
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage.
+----
+[horizontal]
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage.
+
+
+==== Q&A lists
+
+----
+[qanda]
+What is Asciidoctor?::
+  An implementation of the AsciiDoc processor in Ruby.
+What is the answer to the Ultimate Question?:: 42
+----
+
+[qanda]
+What is Asciidoctor?::
+  An implementation of the AsciiDoc processor in Ruby.
+What is the answer to the Ultimate Question?:: 42

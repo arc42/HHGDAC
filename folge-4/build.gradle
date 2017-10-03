@@ -3,17 +3,15 @@ plugins {
 }
 
 ext {
-    projectName = "asciidoc-101"
     currentDate = new Date().format("d. MMM yyyy")
-
 }
 
 asciidoctor {
-   sourceDir = file("src/docs/$projectName")
+   sourceDir = file("src/docs/")
    sources {
-      include "cheatsheet-hhgdac.adoc"
+      include "asciidoc-101.adoc"
    }
-  outputDir = file("build/$projectName")
+  outputDir = file("build")
 
   println "outputDir = " + outputDir
   println "sourceDir = " + sourceDir
