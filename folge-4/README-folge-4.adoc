@@ -1,0 +1,15 @@
+= image:./hhgdac-logo.png[] Folge 4: AsciiDoc 101
+
+Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
+
+== Vereinfachung build.gradle
+Wir haben einen default-task für Gradle gesetzt -
+das macht den build noch einfacher:
+
+    cd folge-4
+    ./gradlew
+
+
+Falls Sie Gradle bereits installiert haben, geht's auch so:
+
+    gradle

@@ -1,0 +1,33 @@
+plugins {
+  id "org.asciidoctor.convert" version "1.5.3"
+}
+
+ext {
+    projectName = "asciidoc-101"
+    currentDate = new Date().format("d. MMM yyyy")
+
+}
+
+asciidoctor {
+   sourceDir = file("src/docs/$projectName")
+   sources {
+      include "cheatsheet-hhgdac.adoc"
+   }
+  outputDir = file("build/$projectName")
+
+  println "outputDir = " + outputDir
+  println "sourceDir = " + sourceDir
+
+  attributes = [
+            doctype: 'book',
+            icons: 'font',
+            sectlink : true,
+            sectanchors : true,
+            numbered : true,
+            'source-highlighter': 'coderay',
+            'currentDate'       : "$currentDate"
+
+   ]
+}
+
+defaultTasks 'clean', 'asciidoctor'
