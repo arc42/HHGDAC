@@ -84,6 +84,33 @@ https://github.com/aim42/aim42/issues/20[nice name]
 Here is the explanation...
 
 
+== Tables
+
+[cols="1,2,3",options="header"]
+|===
+|Prio | Topic | Description
+|A-1 |Performance | rendering < 10 secs
+|A-2 |Flexibility | customizable style sheets
+|B-1 |Correctness | 99% of links shall be valid
+|===
+
+== Hinweise und Tipps
+
+NOTE: Hervorhebungen sind einfach.
+
+WARNING: Warnung vor zu vielen Warnungen
+
+IMPORTANT: Wichtig
+
+[TIP]
+--
+Das funktioniert auch über
+
+mehrere Zeilen gut, dann allerdings
+
+braucht es die '--'.
+--
+
 
 // bold/italics, lists/glossaries etc.
 include::topics/basic-formating.adoc[]

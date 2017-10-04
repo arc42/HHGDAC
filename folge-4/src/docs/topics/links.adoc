@@ -22,19 +22,19 @@ Hyperlink with https://github.com/aim42/aim42/issues/20[nice name]
 Cross references are links within documents.
 
 ----
-<<some-anchor,explanation>> creates a link to the explanation of some-anchor.
+<<an-anchor,explanation>> creates a link to the explanation of some-anchor.
 
 ...
 
-[[some-anchor]]
+[[an-anchor]]
 Here is the explanation...
 ----
 
-<<some-anchor,explanation>> creates a link to the explanation of some-anchor.
+<<an-anchor,explanation>> creates a link to the explanation of some-anchor.
 
 ...
 
-[[some-anchor]]
+[[an-anchor]]
 Here is the explanation...
 
 === Automatic Anchors for Headings
