@@ -22,15 +22,15 @@ the awesome http://asciidoctor.org/docs/user-manual[AsciiDoc User Manual].
 
 == Text Basics
 
-
 === Normal, Bold, Italics
 
-Format text as normal, _italic_, *bold*, +mono+. ``double quoted'', `single quoted'.
+Format text as normal, _italic_, *bold*, +mono+.
 
 === Small and Large
 
-Sometimes it can be useful to write [small]#smaller text#,
-sometimes [big]#big# is appropriate.
+Sometimes [small]#smaller text# is nice,
+
+sometimes [big]#big# is better.
 
 === Verbatim
 
