@@ -1,0 +1,67 @@
+= image:../hhgdac-logo.png[] Folge-3: Unterschiedliche Ausgabeformate
+
+[small]
+--
+Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller]
+und http://gernotstarke.de[G. Starke]
+--
+
+Diesmal generieren wir (neben html) auch epub, pdf, docx und confluence als
+Ausgabeformate - alles aus ein- und derselben AsciiDoc-Basis.
+
+Dazu erweitern wir unser build.gradle ein wenig, dort sind nun
+diverse weitere Tasks enthalten. Ein Auszug:
+
+[source, groovy]
+----
+tasks.withType(AsciidoctorTask) { docTask ->
+
+  attributes \
+          'source-highlighter': 'coderay',
+          'toc': 'left',
+          'icons': 'font',
+          'sourceDir': "$projectDir/src/"
+
+  // good to see what the build is doing...
+  logDocuments = true
+
+}
+
+task generateHTML (
+        type: AsciidoctorTask,
+        group: 'docToolchain',
+        description: 'use html5 as asciidoc backend') {
+
+  backends = ['html5']
+}
+
+task generatePDF (
+        type: AsciidoctorTask,
+        description: 'use pdf as asciidoc backend') {
+
+  backends = ['pdf']
+}
+
+task generateDocBook (
+        type: AsciidoctorTask,
+        description: 'use docbook as asciidoc backend') {
+
+  backends = ['docbook']
+}
+
+task convertToDocx (
+        dependsOn: 'generateDocBook',
+        type: Exec
+) {
+  workingDir 'build/asciidoc/docbook'
+  executable = "pandoc"
+  new File('build/asciidoc/docx/').mkdirs()
+  args = ['-r','docbook',
+          '-t','docx',
+          '-o','../docx/master.docx',
+          'master.xml']
+}
+
+defaultTasks 'generateHTML', 'generatePDF', 'convertToDocx'
+
+----
