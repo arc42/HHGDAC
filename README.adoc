@@ -1,4 +1,5 @@
 = image:./hhgdac-logo.png[] HHGDAC
+:toc: right
 
 **Hitchhikers Guide to Docu-as-Code**
 
@@ -6,7 +7,6 @@
 --
 Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
 --
-
 
 == Schmerzfreie Dokumentation
 Wir möchten Dokumentation in der Softwareentwicklung von vielerlei typischen Schmerzen befreien.
@@ -19,19 +19,20 @@ Wir möchten Dokumentation in der Softwareentwicklung von vielerlei typischen Sc
 * Wir erzeugen _zielgruppenspezifische_ Ergebnisse, u.a. in HTML, pdf, docx oder Confluence.
 
 
-== How-To's
-
-=== Voraussetzungen
+== Voraussetzungen
 
 * https://gradle.org/install[Gradle] installiert zu haben, hilft ungemein... Wir bevorzugen die Installation über http://sdkman.io/[sdkman], den großartigen Package-Manager.
 * Eine Shell/Kommandozeile/Terminal.
 
-=== Folge-1: Einführung
+== Die Beispiele
+
+Die Beispiele haben wir pro Folge in eigene Unterverzeichnisse
+gelegt.
+
 Wir haben einen Wrapper für Gradle zugefügt - das macht den Einstieg für Sie noch einfacher:
 
     cd folge-1
     ./gradlew asciidoctor
-
 
 Falls Sie Gradle bereits installiert haben, geht's auch so:
 
@@ -41,29 +42,22 @@ Falls Sie Gradle bereits installiert haben, geht's auch so:
 Das Ergebnis, die Datei `hello.html`, wird ins Verzeichnis
 `./build/asciidoc/html5` generiert.
 
-=== Folge-2: Modulare Dokumentation
+Analog geht das für die weiteren Folgen!
+
+=== Folge-1: https://github.com/arc42/HHGDAC/tree/master/folge-1[Einführung]
+
+=== Folge-2: https://github.com/arc42/HHGDAC/tree/master/folge-2[Modulare Dokumentation]
 
 Wir zeigen, wie Sie Dokumentation auf verschiedene Teile ("Module")
 aufteilen können, und diese in AsciiDoc durch 'include' Statements
 wieder zusammenfügen.
 
-Auch der Code dieser Folge liegt wieder in einem eigenen Unterverzeichnis:
-
-    cd folge-2
-    ./gradlew asciidoctor
-
-Falls Sie Gradle bereits installiert haben, geht's auch so:
-
-    cd folge-2
-    gradle asciidoctor
-
-
-=== Folge-3: Verschiedene Ausgabeformate
+=== Folge-3: https://github.com/arc42/HHGDAC/tree/master/folge-3[Verschiedene Ausgabeformate]
 (in Vorbereitung beim Verlag)
 
+Wir zeigen, wie Sie docbook, pdf und Co. generieren können.
 
-=== Folge-4: AsciiDoc Cheatsheet
-(noch nicht erschienen)
+=== Folge-4: https://github.com/arc42/HHGDAC/tree/master/folge-4[AsciiDoc Cheatsheet]
 
 In dieser Folge zeigen wir diejenigen AsciiDoc-Features, die unserer Meinung
 nach für praktische Architekturdokumentation (etwa nach arc42) nützlich sind.
@@ -71,10 +65,16 @@ nach für praktische Architekturdokumentation (etwa nach arc42) nützlich sind.
 Wir stellen diese Features in einer Art _Cheat-Sheet_ dar, bei dem Sie die jeweiligen Features
 immer direkt mit den daraus erzeugten Ergebnissen sehen können.
 
-
 === Folge-5: Diagramme
 (in Arbeit)
 
+=== Folge-6: Sourcecode
+(in Arbeit)
+
+=== Folge-7: Tools
+(in Arbeit)
+
+===
 == Links und weitere Infos
 
 * AsciiDoctor Home
