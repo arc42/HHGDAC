@@ -1,23 +1,22 @@
-= image:./hhgdac-logo.png[] HHGDAC
+= image:../hhgdac-logo.png[] Folge 7: Tools
 
-**Hitchhikers Guide to Docu-as-Code**
-
+[small]
+--
 Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller]
 und http://gernotstarke.de[G. Starke]
-
-
-== Folge-7: Tools rund um AsciiDoc
+--
 
 Diesmal geht es um Werkzeuge, die wir für die Arbeit mit Docs-as-Code verwenden
 können.
 
+== Kategorien von AsciiDoc-Tools
 Zuerst mal ein kleiner Überblick, welche Kategorien von Tools es in diesem
 Zusammenhang überhaupt gibt:
 
 image::asciidoc-tooling-overview.png[]
 
 
-=== AsciiDoc Prozessor(en)
+== AsciiDoc Prozessor(en)
 
 * asciidoc
 * asciidoctor
@@ -28,7 +27,7 @@ TODO:
 Hinweise zu Versionen 1.5.3 und 1.5.6
 --
 
-=== Build-Werkzeuge
+== Build-Werkzeuge
 
 Wir wollen unseren AsciiDoc Prozessor in den normalen Sourcecode-Build
 integrieren.
@@ -37,22 +36,48 @@ integrieren.
 * maven
 * make (Ur-Oma aller Build-Werkzeuge, sperrig aber auf Unix-Systemen universell verfügbar)
 
-=== Editoren
+== Editoren
 
-* AsciiDocFX
-* Atom
-* IntelliJ
-* Eclipse
-* AsciiDocLive
-* Notepad++
+=== AsciiDocFX
+
+=== Atom
+Meine (Gernot) fast liebste Plattform zum schreiben: Open-Source, basiert auf Electron.
 
 
-=== Tools zur Anzeige (Preview)
+=== IntelliJ
+
+=== Eclipse
+http://www.vogella.com/tutorials/AsciiDoc/article.html#asciidocwrittertools[Lars Vogel hat beschrieben],
+wie Sie Eclipse per Plugin zum AsciiDoc-Editor
+erweitern können.
+
+=== AsciiDoc-Live
+https://asciidoclive.com/edit/scratch/1[Ein browser-basierter Editor mit Preview]...
+sicher nichts für den Entwicklungsalltag,
+aber zum ausprobieren von AsciiDoc-Features durchaus ok.
+
+
+=== gEdit
+
+=== Notepad++
+Wer unter Windows arbeiten muss oder möchte, könnte das bewährte NotePad++
+als Editor nutzen.
+
+
+
+== Tools zur Anzeige (Preview)
 
 Einige der oben genannten Editoren verfügen bereits über Preview-Möglichkeiten.
 Alternativ dazu hätten wir im Angebot:
 
-* Live-Preview von AsciiDoc-Dateien im Browser
+=== AsciiDoctor Chrome Extension
+https://github.com/asciidoctor/asciidoctor-chrome-extension[Live-Preview von AsciiDoc-Dateien in Chrome].
+
+Gibt's auch _fertig verpackt_ im offiziellen
+https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[Chrome-Webstore]
+
+Sie müssen per config dem Plugin allerdings erlauben,
+lokale Dateien zu lesen.
 
 === Test
 
