@@ -2,7 +2,11 @@
 
 **Hitchhikers Guide to Docu-as-Code**
 
+[small]
+--
 Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
+--
+
 
 == Schmerzfreie Dokumentation
 Wir möchten Dokumentation in der Softwareentwicklung von vielerlei typischen Schmerzen befreien.
@@ -70,3 +74,9 @@ immer direkt mit den daraus erzeugten Ergebnissen sehen können.
 
 === Folge-5: Diagramme
 (in Arbeit)
+
+== Links und weitere Infos
+
+* AsciiDoctor Home
+* AsciiDoctor Writers Guide
+* AsciiDoc (der ursprüngliche, in Python geschriebene Prozessor)
