@@ -52,7 +52,7 @@ Some Text.
 1. number one
 2. number two
 
-=== Multi-line li
+=== Multi-line lists
 
 * A list-entry can have multiple lines.
 +
