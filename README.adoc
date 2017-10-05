@@ -46,6 +46,10 @@ Analog geht das für die weiteren Folgen!
 
 === Folge-1: https://github.com/arc42/HHGDAC/tree/master/folge-1[Einführung]
 
+Wie es sich gehört finden Sie hier das AsciiDoc 'helloWorld',
+und das zugehörige Build-Skript... Ein erster, kleiner aber wichtiger Schritt
+bei Docs-as-Code.
+
 === Folge-2: https://github.com/arc42/HHGDAC/tree/master/folge-2[Modulare Dokumentation]
 
 Wir zeigen, wie Sie Dokumentation auf verschiedene Teile ("Module")
@@ -65,16 +69,16 @@ nach für praktische Architekturdokumentation (etwa nach arc42) nützlich sind.
 Wir stellen diese Features in einer Art _Cheat-Sheet_ dar, bei dem Sie die jeweiligen Features
 immer direkt mit den daraus erzeugten Ergebnissen sehen können.
 
-=== Folge-5: Diagramme
+=== Folge-5: [Diagramme]
 (in Arbeit)
 
-=== Folge-6: Sourcecode
+=== Folge-6: [Sourcecode]
 (in Arbeit)
 
-=== Folge-7: Tools
+=== Folge-7: [Tools]
 (in Arbeit)
 
-===
+
 == Links und weitere Infos
 
 * AsciiDoctor Home
