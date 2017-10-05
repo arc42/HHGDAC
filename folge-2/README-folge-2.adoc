@@ -1,38 +1,31 @@
-= image:./hhgdac-logo.png[] HHGDAC
+= image:../hhgdac-logo.png[] Folge-2: Modularisierung
 
-**Hitchhikers Guide to Docu-as-Code**
-
-Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
-
-== Schmerzfreie Dokumentation
-Wir möchten Dokumentation in der Softwareentwicklung von vielerlei typischen Schmerzen befreien.
-
-
-* Wir _generieren_ Dokumente, beispielsweise Architektur-, Schnittstellen- oder Betriebsdokumentation.
-
-* Wir arbeiten dabei DRY, modular und flexibel.
-
-* Wir erzeugen _zielgruppenspezifische_ Ergebnisse, u.a. in HTML, pdf, docx oder Confluence.
+[small]
+--
+Source und Infos zur JavaMagazin-Kolumne von
+https://rdmueller.github.io/[R.D. Müller] und
+http://gernotstarke.de[G. Starke]
+--
 
 
-== How-To's
+Diesmal geht es um die Aufteilung von Dokumentation in einzelne Teile -
+damit auch (größere) Teams die Arbeit an Doku ordentlich aufteilen können.
 
-=== Voraussetzungen
+AsciiDoc stellt dafür einen leistungsfähigen Befehl bereit:
 
-* https://gradle.org/install[Gradle] installiert zu haben, hilft ungemein... Wir bevorzugen die Installation über http://sdkman.io/[sdkman], den großartigen Package-Manager.
-* Eine Shell/Kommandozeile/Terminal.
+`include::path[]`
 
-=== Folge-1: Einführung
-Wir haben einen Wrapper für Gradle zugefügt - das macht den Einstieg für Sie noch einfacher:
+Wir fangen mit einem kleinen Beispiel an -
+ein Masterdokument inkludiert zwei andere Dateien,
+die ein einem Unterverzeichnis `kapitel` liegen.
 
-    cd folge-1
+Aber sehen Sie selbst:
+
+    cd folge-2
     ./gradlew asciidoctor
 
 
 Falls Sie Gradle bereits installiert haben, geht's auch so:
 
-    cd folge-1
+    cd folge-2
     gradle asciidoctor
-
-Das Ergebnis, die Datei `hello.html`, wird ins Verzeichnis
-`./build/asciidoc/html5` generiert.
