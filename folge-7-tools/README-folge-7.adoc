@@ -1,0 +1,65 @@
+= image:./hhgdac-logo.png[] HHGDAC
+
+**Hitchhikers Guide to Docu-as-Code**
+
+Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller]
+und http://gernotstarke.de[G. Starke]
+
+
+== Folge-7: Tools rund um AsciiDoc
+
+Diesmal geht es um Werkzeuge, die wir für die Arbeit mit Docs-as-Code verwenden
+können.
+
+Zuerst mal ein kleiner Überblick, welche Kategorien von Tools es in diesem
+Zusammenhang überhaupt gibt:
+
+image::asciidoc-tooling-overview.png[]
+
+
+=== AsciiDoc Prozessor(en)
+
+* asciidoc
+* asciidoctor
+* asciidoc.js
+
+TODO:
+--
+Hinweise zu Versionen 1.5.3 und 1.5.6
+--
+
+=== Build-Werkzeuge
+
+Wir wollen unseren AsciiDoc Prozessor in den normalen Sourcecode-Build
+integrieren.
+
+* gradle
+* maven
+* make (Ur-Oma aller Build-Werkzeuge, sperrig aber auf Unix-Systemen universell verfügbar)
+
+=== Editoren
+
+* AsciiDocFX
+* Atom
+* IntelliJ
+* Eclipse
+* AsciiDocLive
+* Notepad++
+
+
+=== Tools zur Anzeige (Preview)
+
+Einige der oben genannten Editoren verfügen bereits über Preview-Möglichkeiten.
+Alternativ dazu hätten wir im Angebot:
+
+* Live-Preview von AsciiDoc-Dateien im Browser
+
+=== Test
+
+Sie haben richtig gelesen: Test der Dokumentation. Zwar kann kein automatischer
+Test den Inhalt Ihrer Dokumentation verifizieren, aber eine Menge möglicher
+Fehler können wir im Rahmen Docs-as-Code automatisch identifizieren.
+
+=== Format-Konverter
+
+* pandoc
