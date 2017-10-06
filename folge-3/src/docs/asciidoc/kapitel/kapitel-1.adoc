@@ -1,0 +1,10 @@
+ifndef::imagesDir[:imagesDir: ../images]
+
+== Übersicht
+
+Eine Übersicht ist immer nützlich.
+
+Und Bilder sind auch fein, besonders mit schönen Bildunterschriften:
+
+.Module unserer Dokumentation
+image::uebersicht.png[]

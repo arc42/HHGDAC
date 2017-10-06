@@ -1,0 +1,18 @@
+ifndef::sourcedir[:sourcedir: ../../../../src/]
+
+== Schnittstellen
+
+Schnittstellen gehören in Architekturdokumentation zu den
+wichtigsten Bestandteilen.
+
+Es hilft sehr, wenn diese Schnittstellen direkt
+aus dem Sourcecode unserer Systeme inkludiert
+werden.
+
+Ein Beispiel:
+
+include::{sourcedir}main/java/demo/SampleAILibrary.java[tag=signatur]
+
+mit Demo:
+
+include::{sourcedir}test/groovy/demo/SampleAILibrarySpec.groovy[tag=example]
