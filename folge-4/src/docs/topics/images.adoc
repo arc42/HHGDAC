@@ -6,7 +6,7 @@
 === Simple images
 
 ----
-image::aim42-logo.png[]
+image::hhgdac-logo.png[]
 ----
 
 image::hhgdac-logo.png[]
@@ -15,7 +15,7 @@ image::hhgdac-logo.png[]
 
 ----
 .Diagram-Title
-image::aim42-logo.png[]
+image::hhgdac-logo.png[]
 ----
 
 .Diagram-Title
@@ -25,7 +25,7 @@ image::hhgdac-logo.png[]
 === Images with caption and alt-text
 
 ----
-image::aim42-logo.png["alternate-text", title="caption-example"]
+image::hhgdac-logo.png["alternate-text", title="caption-example"]
 ----
 
 image::hhgdac-logo.png["alternate-text", title="caption-example"]

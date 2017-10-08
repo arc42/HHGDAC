@@ -8,10 +8,10 @@ You'll see the AsciiDoc plain text, followed by the rendered results.
 === Text and Typesetting
 
 ----
-normal, _italic_, *bold*, +mono+. ``double quoted'', `single quoted'.
+normal, _italic_, *bold*, `mono`
 ----
 
-normal, _italic_, *bold*, +mono+. ``double quoted'', `single quoted'.
+normal, _italic_, *bold*, `mono`
 
 
 ----

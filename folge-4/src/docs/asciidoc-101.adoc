@@ -24,7 +24,7 @@ the awesome http://asciidoctor.org/docs/user-manual[AsciiDoc User Manual].
 
 === Normal, Bold, Italics
 
-Format text as normal, _italic_, *bold*, +mono+.
+Format text as normal, _italic_, *bold*, `mono`.
 
 === Small and Large
 
@@ -39,7 +39,7 @@ sometimes [big]#big# is better.
 > gradle asciicoctor
 ----
 
-== Heading Level 2
+== Heading Level 1
 
 === Heading Level 2
 Some Text.
@@ -54,10 +54,8 @@ Some Text.
 
 === Multi-line lists
 
-* A list-entry can have multiple lines.
-+
-Use the continuation '+'...
-+
+* A list-entry can have multiple lines. +
+Use the continuation ' +'... +
 So you can write entries of arbitrary length.
 
 === Labelled lists (e.g. glossary)
@@ -104,10 +102,8 @@ IMPORTANT: Wichtig
 
 [TIP]
 --
-Das funktioniert auch über
-
-mehrere Zeilen gut, dann allerdings
-
+Das funktioniert auch über +
+mehrere Zeilen gut, dann allerdings +
 braucht es die '--'.
 --
 
