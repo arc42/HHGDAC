@@ -65,5 +65,3 @@ task convertToDocx (
 defaultTasks 'generateHTML', 'generatePDF', 'convertToDocx'
 
 ----
-
-Für den Export nach Confluence werfen Sie am besten einen Blick auf https://github.com/docToolchain/docToolchain bzw. https://doctoolchain.github.io/docToolchain/#_publishtoconfluence

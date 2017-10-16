@@ -46,10 +46,6 @@ Analog geht das für die weiteren Folgen!
 
 === Folge-1: https://github.com/arc42/HHGDAC/tree/master/folge-1[Einführung]
 
-Wie es sich gehört finden Sie hier das AsciiDoc 'helloWorld',
-und das zugehörige Build-Skript... Ein erster, kleiner aber wichtiger Schritt
-bei Docs-as-Code.
-
 === Folge-2: https://github.com/arc42/HHGDAC/tree/master/folge-2[Modulare Dokumentation]
 
 Wir zeigen, wie Sie Dokumentation auf verschiedene Teile ("Module")
