@@ -1,0 +1,60 @@
+import org.asciidoctor.gradle.AsciidoctorTask
+
+plugins {
+  id "org.asciidoctor.convert" version "1.5.3"
+}
+
+asciidoctorj {
+    version = '1.5.4'
+}
+dependencies {
+    asciidoctor 'org.asciidoctor:asciidoctorj-diagram:1.5.4.1'
+    asciidoctor 'org.asciidoctor:asciidoctorj-pdf:1.5.0-alpha.15'
+}
+
+
+//tag::AsciidoctorTask[]
+
+// common settings for asciidoctor
+// this is needed for PDF generation with plantUML
+tasks.withType(AsciidoctorTask) { docTask ->
+
+  attributes \
+          'source-highlighter': 'coderay',
+          'toc': 'left',
+          'icons': 'font',
+          'sectlink': true,
+	      'sectanchors': true,
+	      'numbered': true,
+          'allow-uri-read': true,
+          'plantUMLDir': file("./build/asciidoc/pdf/.").canonicalPath
+          
+  sourceDir = file("src/docs/")
+
+  // good to see what the build is doing...
+  logDocuments = true
+
+  requires = ['asciidoctor-diagram']
+
+  sources {
+      include "folge-5.adoc"
+   }
+
+}
+
+task generateHTML (
+        type: AsciidoctorTask,
+        group: 'docToolchain',
+        description: 'use html5 as asciidoc backend') {
+
+  backends = ['html5']
+}
+
+task generatePDF (
+        type: AsciidoctorTask,
+        description: 'use pdf as asciidoc backend') {
+
+  backends = ['pdf']
+}
+
+defaultTasks 'clean', 'generateHTML', 'generatePDF'

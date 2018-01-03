@@ -1,0 +1,196 @@
+ifndef::imagesdir[:imagesdir: images]
+
+:xrefstyle: full
+//:xrefstyle: short
+//:xrefstyle: basic
+
+== Einfache Bilder
+
+----
+image::arc42-logo.png[]
+----
+
+image::arc42-logo.png[]
+
+== Bild mit Unterschrift/Titel
+
+----
+.Das HHGDAC-Logo
+image::hhgdac-logo.png["alternate-text"]
+----
+
+[[img-ref-example]]
+.Das HHGDAC Logo
+image::hhgdac-logo.png["alternate-text"]
+
+
+== (Vorsicht mit) Styling
+
+Einerseits möchten wir jetzt die Bezeichnung
+der Bilder vom englischen (default-Wert) "Figure"
+auf "Abbildung" ändern. Das geht mit der Direktive
+`:figure-caption: Abbildung`
+
+Andererseits sehen wir dazu noch, wie wir die (absolute)
+Größe von Bildern
+anpassen bzw. vorgeben können...
+
+----
+:figure-caption: Abbildung
+[.float-group]
+--
+.Logo 150px
+image::hhgdac-logo.png[float="left", 150]
+.Logo 100px
+image::hhgdac-logo.png[float="left",100,75]
+[.left]
+.Logo 75px
+image::hhgdac-logo.png[width=75]
+--
+----
+
+:figure-caption: Abbildung
+[.float-group]
+--
+.Logo 150px
+image::hhgdac-logo.png[float="left", 150]
+.Logo 100px
+image::hhgdac-logo.png[float="left",100,75]
+[.left]
+.Logo 75px
+image::hhgdac-logo.png[width=75]
+
+--
+
+In Listing sehen Sie eine `float-group`footnote:[Diesen Tipp mit der 'float-group' haben wir bei
+http://mrhaki.blogspot.de/2017/10/awesome-asciidoctor-grouping-floating.html[@mrhaki]
+gefunden.],
+die allerdings aktuell nur beim
+Rendering in HTML funktioniert - und mit deren Hilfe wir einige Diagramme
+auch nebeneinander (statt hintereinander) darstellen können.
+
+
+Die Größenvorgabe von Bildern können Sie auf zwei
+verschiedene Arten notieren, hier nochmal beide
+im Vergleich:
+
+----
+image::hhgdac-logo.png[HHGDAC,100,75]
+image::hhgdac-logo.png[alt=HHGDAC,width=100,height=75]
+----
+
+
+== Bilder aus der Ferne
+
+ifndef::backend-pdf[]
+
+Natürlich können Sie auch Grafiken inkludieren,
+die nicht bereits zur Compilezeit verfügbar sind,
+sondern erst beim Rendering geladen werden.
+
+Auch das ist primär für HTML interessant - weil Sie beispielsweise
+pdf-Dokumente auch im reinen offline-Modus darstellen möchten,
+daher werden Diagramme und Bilder in diesem (und diversen anderen) Formaten
+vom AsciiDoc Prozessor respektive der DocToolChain eingebettet (_embedded_). 
+
+Diese Bilder können wieder wie oben als float-group nebeneinander dargestellt werden:
+
+----
+[.float-group]
+--
+image::https://img.shields.io/travis/aim42/aim42/master.svg[float="left"]
+image::https://img.shields.io/github/issues/aim42/aim42.svg[float="left"]
+image::https://img.shields.io/github/stars/aim42/aim42.svg?style=social&label=Stars[float="left"]
+--
+----
+
+[.float-group]
+--
+image::http://img.shields.io/travis/aim42/aim42/master.svg[float="left"]
+image::http://img.shields.io/github/issues/aim42/aim42.svg[float="left"]
+image::http://img.shields.io/github/stars/aim42/aim42.svg[float="left"]
+--
+
+Leichter geht es jedoch mit inline-images. Setzt man nach dem image-tag nur einen Doppelpunkt `:`, so wird die Grafik innerhalb der Textzeile dargestellt. Mehrere Icons landen so in einer Zeile. Dafür kann aber keine Bildunterschrift mehr definiert werden:
+
+----
+image:https://img.shields.io/travis/aim42/aim42/master.svg[]
+image:https://img.shields.io/github/issues/aim42/aim42.svg[]
+image:https://img.shields.io/github/stars/aim42/aim42.svg?style=social&label=Stars[]
+----
+
+image:http://img.shields.io/travis/aim42/aim42/master.svg[]
+image:http://img.shields.io/github/issues/aim42/aim42.svg[]
+image:http://img.shields.io/github/stars/aim42/aim42.svg[]
+
+endif::[]
+
+ifdef::backend-pdf[]
+
+Das PDF-Modul kann anscheinend momentan noch keine https-Grafiken referenzieren, weshalb dieser Abschnitt im generierten PDF absichtlich leer ist.
+
+endif::[]
+
+
+== Bilder referenzieren
+
+Sie können einfach auf Bilder verweisen, siehe <<img-ref-example>>:
+
+----
+...siehe Abbildung <<img-ref-example>>
+----
+
+----
+[[img-ref-example]]
+image::hhgdac-logo.png[]
+----
+
+Durch welchen Text die Sprungmarke genau ersetzt werden soll, steuert man mit dem Attribut `:xrefstyle:`. In diesem Beispiel wird durch
+
+* `:xrefstyle: full` die volle Bildunterschrift angegeben, also "Abbildung 1. Das HHGDAC Logo"
+* `:xrefstyle: short` nur die Bildnummer angegeben, also "Abbildung 1"
+* `:xrefstyle: basic` nur der beschreibende Teil der Bildunterschrift angegeben, also "Das HHGDAC Logo"
+
+
+=== Auf die Nummer von Bildern verweisen
+
+Manchmal möchten Sie statt eines Verweises auf den "Namen" der Abbildung
+lieber auf die laufende Nummer der Abbildung verweisen.
+Dafür müssen Sie etwas tiefer in die Trickkiste von AsciiDoc greifen:
+
+1. Sie definieren einen eigenen Zähler, einen _custom counter_. Das
+geht in AsciiDoc _implizit_, in dem Sie eine benannten Zähler einfach
+benutzen. Die Nummerierung startet immer bei 1. Im Beispiel unten ist das
+der Ausdruck `{counter:image_num}`
+2. Sie definieren ein eigenständiges Präfix für derart nummerierte Abbildungen,
+im Beispiel `:nr-fig-caption:Bild`
+3. Sie erweitern die Definition der Bildunterschriften um
+diesen Zähler
+4. Sie vergeben einen _logischen Namen_ für diese Abbildung, im Beispiel `nr_ref_arc42_logo`
+5. Beim Verweis auf diese Abbildung verwenden Sie diesen logischen Namen: Siehe
+<<nr_ref_arc42_logo>>, oder auch <<nr_ref_aim42_logo>>.
+
+----
+:nr-fig-caption: Bild
+
+[#nr_ref_arc42_logo,caption='',title='{nr-fig-caption} {counter:image_num}: Ein bekanntes Logo']
+image::arc42-logo.png[]
+
+Siehe <<nr_ref_arc42_logo>>
+----
+
+:nr-fig-caption: Bild
+[#nr_ref_arc42_logo,caption='',title='{nr-fig-caption} {counter:image_num}: Ein bekanntes Logo']
+image::arc42-logo.png[]
+
+[#nr_ref_aim42_logo,caption='',title={nr-fig-caption} {counter:image_num}]
+image::aim42-logo.png[width=150]
+
+NOTE: Aktuell kennen wir keine Möglichkeit, bei benannten Abbildungen *nur*
+auf die Nummer zu verweisen. In <<nr_ref_aim42_logo>> haben wir das geschafft,
+weil dieses Bild keine Bildunterschrift besitzt.
+
+Auch hier hat uns
+<<ref-mrhaki, @mrhaki>> unter die Arme gegriffen, siehe seinen
+entsprechenden
+http://mrhaki.blogspot.de/2016/09/awesome-asciidoctor-trick-to-use.html[Blogpost]

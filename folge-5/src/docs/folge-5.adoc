@@ -1,0 +1,47 @@
+= AsciiDoc und Bilder/Diagramme
+:toc: right
+:imagesdir: images
+
+
+Auch für diese Folge haben wir den Quellcode in Module aufgeteilt,
+die inhaltlich unseren Schwerpunkten entsprechen:
+
+* Einfache Diagramme: Existierende Bilder oder Diagramme von lokalen oder entfernten
+Speicherorten einbinden.
+* Diagramme, die zur Compilezeit aus einer textuellen Repräsentation ("DSL")
+generiert werden.
+
+include::einfache-bilder.adoc[]
+
+== Was jetzt noch fehlt..
+
+Wir haben bislang Bilder eingebunden, die als Grafiken (jpg, png, svg oä)
+vorliegen - aber es wäre ja (noch) mehr im Sinne von Docs-As-Code,
+wenn Sie Diagramme mittels einer DSL beschreiben könnten.
+
+Dazu gibt es ein Open-Source Projekt namens
+http://plantuml.com[PlantUML],
+mit dem Sie genau das erreichen können. Eine paar kleine Beispiele
+zeigen das genauer:
+
+include::plantuml-bilder.adoc[]
+
+== Quellen
+
+[[ref-mrhaki]]
+* Hubert A. Klein Ikkink, unter seinem Kürzel
+https://twitter.com/mrhaki[@mrhaki] bekannt, schreibt seit
+langer Zeit einen
+http://www.mrhaki.com/[Blog über Groovy, Gradle, AsciiDoctor]
+und weitere Themen. Ein riesiger Fundus an Tipps und Hinweisen - von denen
+wir (sowohl für die Kolumne als auch bei unserer Arbeit) schon oftmals
+profitiert haben.
++
+Er hat seine gesammelten Tipps zum Thema Asciidoctor als (kostenfreies)
+https://leanpub.com/awesomeasciidoctornotebook[eBook bei Leanpub]
+veröffentlicht.
+
+* https://plantuml.com[PlantUML] ist eine Open-Source Library, die textuelle
+Beschreibungen von UML-Diagrammen in eine grafische Repräsentation übersetzt.
+
+Written with Asciidoctor {asciidoctor-version}. 
