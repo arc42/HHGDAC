@@ -26,7 +26,8 @@ tasks.withType(AsciidoctorTask) { docTask ->
           'sectlink': true,
 	      'sectanchors': true,
 	      'numbered': true,
-          'allow-uri-read': true
+          'allow-uri-read': true,
+          'plantUMLDir': file("./build/asciidoc/pdf/.").canonicalPath
           
   sourceDir = file("src/docs/")
 
