@@ -1,0 +1,37 @@
+= image:../hhgdac-logo.png[] Folge 5: Bilder, Teil-1
+
+[small]
+--
+Source und Infos zur JavaMagazin-Kolumne von
+https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
+--
+
+
+== Vereinfachung build.gradle
+Wir haben für diese Folge wieder einen default-task für Gradle gesetzt -
+das macht den build noch einfacher:
+
+    cd folge-5
+    ./gradlew
+
+Falls Sie Gradle bereits installiert haben, geht's auch so:
+
+    gradle
+
+
+== Was Sie erwartet...
+
+* Bilder und Diagramme einfügen
+* Bildunterschrift (aka Bild-Titel)
+* Bild mit fortlaufender Nummer
+* Mehrere Bilder in einer Zeile
+
+== Quellen
+
+Hubert A. Klein Ikkink, unter seinem Kürzel
+https://twitter.com/mrhaki[@mrhaki] bekannt, schreibt seit
+langer Zeit einen
+http://www.mrhaki.com/[Blog über Groovy, Gradle, AsciiDoctor]
+und weitere Themen. Ein riesiger Fundus an Tipps und Hinweisen - von denen
+wir (sowohl für die Kolumne als auch bei unserer Arbeit) schon oftmals
+profitiert haben.
