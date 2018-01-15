@@ -5,8 +5,11 @@
 Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
 --
 
-include::abstract-folge-4.adoc[]
+Wir zeigen diejenigen AsciiDoc-Features, die unserer Meinung
+nach für praktische Architekturdokumentation (etwa nach arc42) nützlich sind.
 
+Wir stellen diese Features in einer Art _Cheat-Sheet_ dar, bei dem Sie die jeweiligen Features
+immer direkt mit den daraus erzeugten Ergebnissen sehen können.
 
 
 == Vereinfachung build.gradle

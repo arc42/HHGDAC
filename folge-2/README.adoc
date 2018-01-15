@@ -8,7 +8,12 @@ http://gernotstarke.de[G. Starke]
 --
 
 
-include::abstract-folge-2.adoc[]
+Diesmal geht es um die Aufteilung von Dokumentation in einzelne Teile -
+damit auch (größere) Teams die Arbeit an Doku ordentlich aufteilen können:
+
+Wir zeigen, wie Sie Dokumentation auf verschiedene Teile ("Module")
+aufteilen können, und diese in AsciiDoc durch 'include' Statements
+wieder zusammenfügen.
 
 AsciiDoc stellt dafür einen leistungsfähigen Befehl bereit:
 

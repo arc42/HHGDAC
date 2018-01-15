@@ -33,21 +33,32 @@ gelegt.
 
 === Folge-2: https://github.com/arc42/HHGDAC/tree/master/folge-2[Modulare Dokumentation]
 
-include::folge-2/abstract-folge-2.adoc[]
+Diesmal geht es um die Aufteilung von Dokumentation in einzelne Teile -
+damit auch (größere) Teams die Arbeit an Doku ordentlich aufteilen können:
+
+Wir zeigen, wie Sie Dokumentation auf verschiedene Teile ("Module")
+aufteilen können, und diese in AsciiDoc durch 'include' Statements
+wieder zusammenfügen.
 
 === Folge-3: https://github.com/arc42/HHGDAC/tree/master/folge-3[Verschiedene Ausgabeformate]
 
-include::folge-3/abstract-folge-3.adoc[]
+Wir zeigen, wie Sie (neben html) auch pdf, docx, confluence, epub
+und Co. als Ausgabeformate generieren können - alles aus ein- und derselben AsciiDoc-Basis.
 
 
 === Folge-4: https://github.com/arc42/HHGDAC/tree/master/folge-4[AsciiDoc Cheatsheet]
 
-include::folge-4/abstract-folge-4.adoc[]
+Wir zeigen diejenigen AsciiDoc-Features, die unserer Meinung
+nach für praktische Architekturdokumentation (etwa nach arc42) nützlich sind.
 
-=== Folge-5: [Diagramme, Teil 1]
-(in Arbeit)
+Wir stellen diese Features in einer Art _Cheat-Sheet_ dar, bei dem Sie die jeweiligen Features
+immer direkt mit den daraus erzeugten Ergebnissen sehen können.
 
-=== Folge-6: [Diagramme, Teil 1]
+=== Folge-5: https://github.com/arc42/HHGDAC/tree/master/folge-5[Diagramme, Teil 1]
+Diesmal geht es um Bilder und Diagramme, mit/ohne Bildunterschriften,
+laufende Nummerierung und (einfaches) Styling.
+
+=== Folge-6: https://github.com/arc42/HHGDAC/tree/master/folge-6[Diagramme, Teil 2]
 (in Arbeit)
 
 === Folge-7: [Sourcecode]

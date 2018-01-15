@@ -6,6 +6,8 @@ Source und Infos zur JavaMagazin-Kolumne von
 https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
 --
 
+Diesmal geht es um Bilder und Diagramme, mit/ohne Bildunterschriften,
+laufende Nummerierung und (einfaches) Styling.
 
 == Vereinfachung build.gradle
 Wir haben für diese Folge wieder einen default-task für Gradle gesetzt -
