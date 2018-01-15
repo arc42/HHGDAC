@@ -8,8 +8,7 @@ http://gernotstarke.de[G. Starke]
 --
 
 
-Diesmal geht es um die Aufteilung von Dokumentation in einzelne Teile -
-damit auch (größere) Teams die Arbeit an Doku ordentlich aufteilen können.
+include::abstract-folge-2.adoc[]
 
 AsciiDoc stellt dafür einen leistungsfähigen Befehl bereit:
 
