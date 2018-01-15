@@ -1,0 +1,2 @@
+Wir zeigen, wie Sie (neben html) auch pdf, docx, confluence, epub
+und Co. als Ausgabeformate generieren können - alles aus ein- und derselben AsciiDoc-Basis.

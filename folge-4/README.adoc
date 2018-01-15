@@ -5,6 +5,9 @@
 Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
 --
 
+include::abstract-folge-4.adoc[]
+
+
 
 == Vereinfachung build.gradle
 Wir haben für diese Folge einen default-task für Gradle gesetzt -

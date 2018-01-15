@@ -6,8 +6,8 @@ Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. M
 und http://gernotstarke.de[G. Starke]
 --
 
-Diesmal generieren wir (neben html) auch epub, pdf, docx und confluence als
-Ausgabeformate - alles aus ein- und derselben AsciiDoc-Basis.
+include::abstract-folge-3.adoc[]
+
 
 Dazu erweitern wir unser build.gradle ein wenig, dort sind nun
 diverse weitere Tasks enthalten. Ein Auszug:

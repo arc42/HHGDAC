@@ -1,0 +1,5 @@
+Wir zeigen diejenigen AsciiDoc-Features, die unserer Meinung
+nach für praktische Architekturdokumentation (etwa nach arc42) nützlich sind.
+
+Wir stellen diese Features in einer Art _Cheat-Sheet_ dar, bei dem Sie die jeweiligen Features
+immer direkt mit den daraus erzeugten Ergebnissen sehen können.
