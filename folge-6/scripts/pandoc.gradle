@@ -1,0 +1,41 @@
+//tag::convertToDocx[]
+task convertToDocx (
+        group: 'docToolchain',
+        type: Exec
+) {
+    // For now it's only taking the first input file that has docbook format specified
+    def sourceFile = sourceFiles.find { 'docbook' in it.formats }.file.replace('.adoc', '.xml')
+    def targetFile = sourceFile.replace('.xml', '.docx')
+
+    workingDir "$targetDir/docbook"
+    executable = "pandoc"
+    new File("$targetDir/docx/").mkdirs()
+    args = ['-r','docbook',
+            '-t','docx',
+            '-o',"../docx/$targetFile",
+            sourceFile]
+}
+//end::convertToDocx[]
+
+//tag::convertToEpub[]
+task convertToEpub (
+        group: 'docToolchain',
+        type: Exec
+) {
+    // For now it's only taking the first input file that has docbook format specified
+    def sourceFile = sourceFiles.find { 'docbook' in it.formats }.file.replace('.adoc', '.xml')
+    def targetFile = sourceFile.replace('.xml', '.epub')
+
+    workingDir "$targetDir/docbook"
+    executable = "pandoc"
+    new File("$targetDir/epub/").mkdirs()
+    args = ['-r','docbook',
+            '-t','epub',
+            '-o',"../epub/$targetFile",
+            sourceFile]
+}
+//end::convertToEpub[]
+project.afterEvaluate {
+    project.tasks.convertToDocx.dependsOn generateDocbook
+    project.tasks.convertToEpub.dependsOn generateDocbook
+}
