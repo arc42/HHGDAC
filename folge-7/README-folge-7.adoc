@@ -1,0 +1,28 @@
+= image:../hhgdac-logo.png[] Folge 7: Sourcecode integrieren
+
+[small]
+--
+Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
+--
+
+
+== Build
+Wiederum haben wirt einen default-task für Gradle gesetzt -
+für einen möglichst einfachen build:
+
+    cd folge-7
+    ./gradlew
+
+
+Falls Sie Gradle bereits installiert haben, geht's auch so:
+
+    gradle
+
+== Was Sie erwartet...
+
+* SourceCode anzeigen
+* Programmiersprachen und Syntax-Highlighting
+* Einzelne Zeilen von Code erklären
+* Code aus dem Repository inkludieren
+* bestimmte Stellen aus Code inkludieren
+* Ausblick: JavaDoc mit AsciiDoc

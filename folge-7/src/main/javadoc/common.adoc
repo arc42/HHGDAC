@@ -1,0 +1,2 @@
+Some lines of asciidoc source, that will be **included**
+into JavaDoc comments.

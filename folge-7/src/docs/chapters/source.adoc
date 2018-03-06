@@ -1,0 +1,8 @@
+// durch die nächste Zeile kann der code auch im Editor angezeigt werden
+ifndef::main_sourcepath[:main_sourcepath: ../../main]
+
+[source, groovy]
+.Listing: Interface CheckResults
+----
+include::{main_sourcepath}/org/aim42/CheckResults.groovy[tags=CheckResultsInterface]
+----

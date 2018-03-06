@@ -1,0 +1,262 @@
+// Sourcecode integrieren
+//
+= HHGDAC: Sourcecode integrieren
+:source-highlighter: coderay
+:xrefstyle: full
+//:coderay-linenums-mode: inline
+ifndef::main_sourcepath[:main_sourcepath: ../main]
+
+:test_sourcepath: ../test
+:toc: left
+
+== SourceCode anzeigen
+
+Bevor wir uns an Sourcecode begeben, sollten wir AsciiDoc
+mitteilen, welche Bibliothek wir für Syntax-Highlighing
+verwenden möchten - es werden z.B. Coderay, highlightjs,
+pygments und diverse andere <<highlighter>> unterstützt.
+
+Die Verwendung eines bestimmten Highlighters hängt hauptsächlich von den benötigten  http://asciidoctor.org/docs/user-manual/#available-source-highlighters[Ausgabeformaten] und den in Ihrem Projekt verwendeten Sprachen ab.
+
+Fügen Sie im Header Ihres AsciiDoc-Dokumentes
+folgende Deklaration ein:
+
+----
+= HHGDAC: Sourcecode integrieren
+:source-highlighter: coderay
+----
+
+So - jetzt sind wir bereit für _real stuff_:
+
+----
+[source,python]
+--
+# This program prints Hello, world!
+
+print('Hello, world!')
+--
+----
+
+
+.Hello, World
+[source, python]
+--
+# This program prints Hello, world!
+
+print('Hello, world!')
+--
+
+
+== Programmiersprachen und Syntax-Highlighting
+Sie können die Programmiersprache als zweiten Parameter
+in der '[source,<language>]' Deklaration angeben -
+AsciiDoc (beziehungsweise die jeweiligen Source-Highlighter)
+können sich dann besser auf die jeweilige Syntax einstellen.
+
+.Go gefällig?
+[source,go]
+----
+package main
+import "fmt"
+func main() {
+    fmt.Println("hello world")
+}
+----
+
+Es geht auch mit Zeilennummern footnote:[In diversen Preview-Funktionen
+bei AsciiDoc-Editoren, u.a. auch beim Atom-Editor und Github-Preview
+funktioneren die Zeilennummern leider nicht.], meistens zumindestens: Einfach nur
+den Parameter 'linenums' aufnehmen!
+
+.Oder JavaScript?
+[source,javascript,linenums]
+--
+function documentTitle(theTitle) {
+  theTitle  = theTitle || "Untitled Document";
+}
+--
+
+----
+.Oder JavaScript?
+[source,javascript,linenums]<1>
+--
+function documentTitle(theTitle) {
+  theTitle  = theTitle || "Untitled Document";
+}
+--
+----
+
+<1> Dazu verwenden wir in der '[source,<language>]'
+Deklaration noch einen dritten Parameter 'linenums':
+
+== Einzelne Zeilen von Code erklären
+Im vorhergehenden Listing finden Sie eine Hervorhebung
+im Sourcecode, die wir anschliessend zur Erklärung verwendet haben.
+
+Schauen wir uns das mal ausführlich an:
+
+In Quellcode-Listings können Sie einzelne Zeilen
+durch '<1>' hervorheben. Diese so genannten _callouts_
+müssen immer (als Kommentar) am Ende einer Zeile stehen.
+
+.Code mit Erklärungen
+[source,java]
+--
+import org.harryp.Voldemort; // <1>
+import org.harryp.Harry; // <2>
+
+public class Stakeholder {
+
+    public String wandName; // <3>
+
+    // ...
+}
+--
+<1> diesen Namen besser vermeiden
+<2> der Knabe mit der Brille
+<3> Zauberstäbe tragen Namen
+
+
+== Code aus dem Repository inkludieren
+Sie sollten Sourcecode möglichst in DRY-Manier inkludieren
+(_don't repeat yourself_), also möglichst nicht mittels copy-paste
+in Ihre Dokumentation einfügen, sondern lieber aus dem Original
+Code-Repository inkludieren footnote:[Genau genommen aus einer working-copy
+des Computers, auf der die Dokumentation generiert wird...].
+
+Dazu können Sie in AsciiDoc die bereits bekannte 'include'
+Anweisung mit der '[source]' Auszeichnung kombinieren.
+Zusätzlich schlagen wir vor, den Pfad zum Code-Repository
+als eine Variable zu definieren.
+
+----
+[source, groovy]
+--
+include::{main_sourcepath}/org/aim42/CheckResults.groovy[] <1>
+--
+----
+<1> beachten Sie die Variable '{main_sourcepath}', die ein include von einem beliebigen Dateipfad
+ermöglicht.
+
+Für unser Beispiel haben wir '{main_sourcepath}' zu Beginn der AsciiDoc Datei definiert:
+
+[source,asciidoc]
+----
+= HHGDAC: Sourcecode integrieren <1>
+:source-highlighter: coderay <2>
+:coderay-linenums-mode: inline
+:main_sourcepath: ../main/ <3>
+----
+<1> Der Titel des Dokumentes
+<2> Welcher Code-Highlighter wird verwendet?
+<3> Hier definieren wir die Variable +{main_sourcepath}+, die wir weiter oben
+zum (relativen) include verwendet haben.
+
+Heraus kommt dann folgendes:
+
+
+[[listing-ref-example]]
+[source, groovy]
+.CheckResults.groovy
+----
+include::{main_sourcepath}/org/aim42/CheckResults.groovy[]
+----
+
+=== Pfadvariablen + Verzeichnisbäume
+
+Die Pfade für den `include`-Befehl des AsciiDoc Prozessors werden im gegensatz zum `image`-Befehl relativ zum Dokument aufgelöst.
+Für die Strukturierung einer Dokumentation ist das praktisch -
+für das Einbinden von Code nicht.
+Je nachdem wo das AsciiDoc-Dokument liegt, müsste ein anderer Pfad gesetzt werden.
+Deshalb bietet es sich an, für größere Dokumentationen, die Variable `main_sourcepath` im `build.gradle` als absoluten Pfad zu setzen:
+
+[source,groovy]
+----
+include::../../build.gradle[tags=attributes]
+----
+
+<1> so kann der absolute Pfad zur Laufzeit dynamisch gesetzt werden.
+
+
+[tree]
+----
+> folge-7-sourcecode
+>> build
+>> readme.md
+>> src
+>>> docs <1>
+>>> main <2>
+>>>> org/aim42/CheckResults.groovy
+>>> test
+----
+<1> unser Root-Verzeichnis, im Buildfile 'build.gradle' definiert
+<2> hierhin zeigt die Pfadvariable 'main_sourcepath' (siehe oben)
+
+(Zum Rendern dieses Verzeichnisbaumes benutzen wir
+  eine http://asciidoctor.org/docs/extensions/[AsciiDoc Erweiterung]
+  namens https://github.com/allati/asciidoctor-extension-monotree[MonoTree]).
+
+
+== Ein Listing referenzieren
+Sie können natürlich auch bestimmte Listings Ihrer Dokumentation
+referenzieren, siehe etwa <<listing-ref-example>>.
+
+Das schreiben Sie in Asciidoc als normale Referenz:
+
+----
+Sie können natürlich auch bestimmte Listings Ihrer Dokumentation
+referenzieren, siehe etwa <<listing-ref-example>>.
+----
+
+
+== Bestimmte Stellen aus Code inkludieren
+
+Oftmals genügt es, bestimmte (kurze) Teile aus Source-Files zu inkludieren.
+Auch dafür hat AsciiDoc eine elegante Antwort gefunden - nachfolgend sehen
+Sie einen Extrakt der Datei aus Listing <<listing-ref-example>> oben,
+diesmal beschränkt auf zwei Methoden:
+
+(diesmal über ein anderes `.adoc`-File eingebunden, um den richtigen Umgang mit der `main_sourcepath` zu demonstrieren)
+
+include::chapters/source.adoc[]
+
+== JavaDoc mit AsciiDoc
+
+Wir finden es großartig, JavaDoc-Kommentare endlich nicht mehr
+als HTML schreiben zu müssen.
+
+Der Ansatz basiert auf dem
+https://github.com/asciidoctor/asciidoclet[AsciiDoclet],
+das bei Github unter der AsciiDoctor-Organisation entwickelt wird.
+
+Um diese AsciiDoc Erweiterung zu nutzen, müssen wir unser Buildfile
+deutlich erweitern:
+
+[source,groovy]
+----
+include::../../build.gradle[tags=javadoc]
+----
+
+Ruft man nun `gradle javadoc` auf, so wird wie gewohnt die Dokumentation der Klassen erzeugt, wobei die einzelnen Elemente jetzt aber angenehm in AsciiDoc und nicht mehr in HTML beschrieben werden.
+
+Die `javadoc` Dokumentation und die Architekturdokumentation können durch gegenseitige Verlinkung kombiniert werden.
+Dazu kann in der `javadoc` Konfiguration ein Übersichts-Dokument angegeben werden.
+Theoretisch könnte hier auch direkt die Architekturdokumentation referenziert werden - aufgrund der verschieden konfigurierten AsciiDoc-Prozessoren raten wir davon jedoch ab.
+
+Hier geht es zur link:../docs/javadoc/index.html[Javadoc-Dokumentation]
+
+== Links + Referenzen
+:chapter-number: 98
+
+[[highlighter]] http://asciidoctor.org/docs/user-manual/#available-source-highlighters[AsciiDoc Syntax Highlighter Libraries],
+eine Übersicht im AsciiDoctor User Manual.
+
+[[adoc-guide]] http://asciidoctor.org/docs/asciidoc-writers-guide[AsciiDoctor Writers Guide], der AsciiDoctor Writers Guide.
+Beantwortet so ziemlich alle (Standard-)Fragen zur Arbeit mit AsciiDoctor.
+
+[[swagger-adoc]] https://blog.philipphauer.de/rest-api-documentation-swagger-asciidoc/[Swagger + AsciiDoc],
+Phillip Hauer erklärt, wie Sie Ihre Swagger REST-API's mit AsciiDoc anreichern können. Für Systeme mit
+REST-Anteil eine aus unserer Sicht _coole_ Option.
+
+[[javadoc]] Über den Einsatz von AsciiDoc in JavaDoc-Kommentaren hat http://mrhaki.blogspot.de[@mrhaki] schon mal
+ http://mrhaki.blogspot.de/2015/10/awesome-asciidoctor-using-asciidoctor.html[ausführlich geschrieben].

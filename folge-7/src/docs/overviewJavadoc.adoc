@@ -1,0 +1,8 @@
+Dies ist die Klassendokumentation des Projekts.
+
+// javadoc scheint nicht das window-target des link:-Befehls zu unterstützen
+// deshalb erzeugen wir den Link direkt als HTML
+++++
+Einen Ueberblick ueber das Projekt gibt Ihnen die
+<a href="../../html5/code-integrieren.html" target="_top">Architekturdokumentation</a>
+++++

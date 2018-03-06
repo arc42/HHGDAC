@@ -1,0 +1,86 @@
+plugins {
+  id "org.asciidoctor.convert" version "1.5.3"
+}
+
+apply plugin:'java'
+
+ext {
+    asciidoctorDocletVersion = '1.5.4'
+    monotreeVersion = '0.0.1'
+}
+
+// tag::javadoc[]
+configurations {
+    // Extra configuration to assign Asciidoclet dependencies,
+    // so it will not interfer with other configurations
+    asciidoctorDoclet
+}
+
+repositories.jcenter()
+
+dependencies {
+  asciidoctor "com.github.allati.asciidoctor.monotree:asciidoctor-extension-monotree:${project.monotreeVersion}"
+  asciidoctorDoclet "org.asciidoctor:asciidoclet:${project.asciidoctorDocletVersion}"
+}
+
+configurations {
+    asciidoclet
+}
+
+javadoc {
+    // Configure Javadoc options.
+    options.with {
+        // Configure Asciidoclet class path and class name
+        // for the Javadoc task.
+        docletpath = configurations.asciidoctorDoclet.files.asType(List)
+        doclet = 'org.asciidoctor.Asciidoclet'
+
+        // Set base dir. E.g. used for include directives.
+        // Asciidoclet attributes need to be prefixed with -.
+        // - is turned into -- when Javadoc tool is executed.
+        addStringOption '-base-dir', projectDir.toString()
+
+        // We can add Asciidoc document attributes and use them
+        // in our Javadoc comments. E.g. {projectName}.
+        def attributes = [projectName: project.name,
+                          projectVersion: project.version]
+
+
+        // Combine document attributes with key/value pairs separated
+        // by a comma. These are the document attributes passed
+        // on to Asciidoctor.
+        addStringOption '-attribute', attributes*.toString().join(',')
+
+        // Overview document can also be a Asciidoctor document.
+        overview = 'src/docs/overviewJavadoc.adoc'
+
+        // Show version and author tags.
+        // Normal Javadoc tags are correctly processed.
+        version = true
+        author = true
+    }
+}
+// end::javadoc[]
+
+asciidoctor {
+   sourceDir = file("src/docs/")
+   sources {
+      include "code-integrieren.adoc"
+   }
+  outputDir = file("build")
+
+  // tag::attributes[]
+  attributes = [
+            doctype: 'book',
+            icons: 'font',
+            sectlink : true,
+            sectanchors : true,
+            numbered : true,
+            xrefstyle: 'full',
+            main_sourcepath : file(projectDir.toString()+'/src/main/').canonicalPath //<1>
+   ]
+   // end::attributes[]
+}
+
+//source-highlighter
+defaultTasks 'clean', 'asciidoctor', 'javadoc'
