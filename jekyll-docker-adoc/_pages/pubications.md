@@ -1,6 +1,6 @@
 ---
 title: "Publications"
-layout: splash
+layout: single
 permalink: /publications
 header:
 #  overlay_color: "#fff"

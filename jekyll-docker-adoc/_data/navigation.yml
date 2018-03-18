@@ -2,8 +2,8 @@
 main:
   - title: "Get Started"
     url: /getstarted
-# - title: "Docs"
-#   url: /documentation
+  - title: "FAQ"
+    url: /faq
   - title: "Examples"
     url: /examples
   - title: "Publications"

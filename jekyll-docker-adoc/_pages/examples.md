@@ -1,6 +1,6 @@
 ---
 title: "Examples for Docs-As-Code"
-layout: splash
+layout: single
 permalink: /examples
 header:
   overlay_color: "#000"
