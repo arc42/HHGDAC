@@ -24,10 +24,10 @@ Wir möchten Dokumentation in der Softwareentwicklung von vielerlei typischen Sc
 * https://gradle.org/install[Gradle] installiert zu haben, hilft ungemein... Wir bevorzugen die Installation über http://sdkman.io/[sdkman], den großartigen Package-Manager.
 * Eine Shell/Kommandozeile/Terminal.
 
-== Die Beispiele
+== Die Folgen...
 
-Die Beispiele haben wir pro Folge in eigene Unterverzeichnisse
-gelegt.
+Pro Folge der Kolumne haben wir Beispiele etc. in eigene Unterverzeichnisse
+organisiert.
 
 === Folge-1: https://github.com/arc42/HHGDAC/tree/master/folge-1[Einführung]
 
