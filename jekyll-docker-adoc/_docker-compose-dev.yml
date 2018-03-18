@@ -3,7 +3,7 @@
 version: '2'
 
 services:
-  arc42-jekyll:
+  hhgdac-jekyll:
     build: .
     image: hhgdac-jekyll/0.1
     command: jekyll serve --trace --host 0.0.0.0 --watch --incremental
