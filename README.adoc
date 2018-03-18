@@ -59,17 +59,21 @@ Diesmal geht es um Bilder und Diagramme, mit/ohne Bildunterschriften,
 laufende Nummerierung und (einfaches) Styling.
 
 === Folge-6: https://github.com/arc42/HHGDAC/tree/master/folge-6[Diagramme, Teil 2]
-(in Arbeit)
+Die Fortsetzung - weiterführende Themen zu Diagrammen und Bildern.
 
-=== Folge-7: [Sourcecode]
-(in Arbeit)
+=== Folge-7: https://github.com/arc42/HHGDAC/tree/master/folge-7[Sourcecode]
+Sourcecode in Dokumentation, Syntax-Highlighting, Code direkt aus dem Repo inkludieren
+(jawohl - ohne copy/paste!).
 
-=== Folge-8: [Tools]
-(in Arbeit)
+=== Folge-8: https://github.com/arc42/HHGDAC/tree/master/folge-8[Tools]
+Einige Werkzeuge, die wir (Ralf + Gernot) zum arbeiten mit AsciiDoc für Sie ausprobiert haben.
 
-=== Folge-9:
+=== Folge-9: lassen Sie sich überraschen
+
 
 == Links und weitere Infos
+
+(oops - hier müssen wir noch Links nachpflegen...)
 
 * AsciiDoctor Home
 * AsciiDoctor Writers Guide
