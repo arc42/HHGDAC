@@ -1,0 +1,29 @@
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    {% if site.data.ui-text[site.locale].follow_label %}
+      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+    {% endif %}
+    {% if site.twitter.username %}
+      <li><a href="https://twitter.com/{{ site.twitter.username }}"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    {% endif %}
+
+    {% if site.author.github %}
+      <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    {% endif %}
+
+    <li><a href="https://www.xing.com/xbp/pages/arc42"><i class="fab fa-fw fa-xing" aria-hidden="true"></i> Xing</a></li>
+
+
+    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | absolute_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
+
+    <li><a href="{{ '/imprint' | absolute_url }}"><i class="fas fa-fw fa-gavel" style="color:Tomato" aria-hidden="true"></i> Imprint</a></li>
+    <li><a href="{{ '/imprint' | absolute_url }}"><i class="fas fa-fw fa-lock" aria-hidden="true"></i> Privacy</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }}
+  <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+  Supported by <a href="https://INNOQ.com"><b>INNOQ</b></a>.<br><p>
+   <a href="{{ site.baseurl }}/imprint">Imprint + Privacy Statement</a>
+
+</div>

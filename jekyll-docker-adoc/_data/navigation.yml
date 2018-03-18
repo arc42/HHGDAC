@@ -1,0 +1,12 @@
+# main links
+main:
+  - title: "Get Started"
+    url: /getstarted
+# - title: "Docs"
+#   url: /documentation
+  - title: "Examples"
+    url: /examples
+  - title: "Publications"
+    url: /publications
+  - title: "Contact"
+    url: /contact

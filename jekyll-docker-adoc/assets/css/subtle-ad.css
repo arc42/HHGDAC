@@ -1,0 +1,44 @@
+/* subtle ads */
+
+.subtle-ad {
+  width: 70%;
+  margin: 5px;
+  padding: 5px;
+
+  background-color: rgba(254, 228, 228, 0.3);
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #800000;
+
+  -webkit-box-shadow: 3px 3px 4px 0px rgba(156,61,75,1);
+  -moz-box-shadow: 3px 3px 4px 0px rgba(156,61,75,1);
+  box-shadow: 3px 3px 4px 0px rgba(156,61,75,1);
+
+  color: #032f7f;
+}
+
+/* use before-pseudo-class to add icon */
+.subtle-ad::before {
+  display: block;
+  float: right;
+  width: 50px;
+  height: 80px;
+
+  content: "";
+  background: url("./arc42-exclamation.svg") no-repeat;
+  background-size: 80px 80px;
+}
+
+
+.subtle-ad h4 {
+  font-family: $header-font-family;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.2pt;
+  margin-top: 5px;
+}
+
+.subtle-ad a {
+  color: ff796a;
+}
