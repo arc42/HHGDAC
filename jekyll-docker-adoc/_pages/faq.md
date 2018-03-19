@@ -4,8 +4,8 @@ layout: single
 permalink: /faq
 excerpt: "Frequently Asked Questions,<br>answered."
 header:
-  overlay_image: /images/splash/faq-518780-unsplash.jpg
-  caption: "Photo credit: [**Jon Tyson**](https://unsplash.com/photos/RUsczRV6ifY)"
+  overlay_image: /images/splash/faq-daniil-avilov-428715-unsplash.jpg
+  caption: "Photo credit: [**Daniil Avilov**](https://unsplash.com/photos/C4G18Paw0d4)"
 
 ---
 

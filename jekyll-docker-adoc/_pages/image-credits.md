@@ -8,9 +8,9 @@ header:
 
 
 gallery:
-  - title: "FAQ, image by Jon Tyson (Unsplash)"
-    url: https://unsplash.com/photos/RUsczRV6ifY
-    image_path: /images/splash/faq-518780-unsplash.jpg
+  - title: "FAQ, image by Daniil Avilov (Unsplash)"
+    url: https://unsplash.com/photos/C4G18Paw0d4
+    image_path: /images/splash/faq-daniil-avilov-428715-unsplash.jpg
   - title: "Get-Started, image by David Iskander (Unsplash)"
     url: https://unsplash.com/photos/iWTamkU5kiI
     image_path: /images/splash/get-started-599118-unsplash.jpg
