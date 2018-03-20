@@ -1,13 +1,7 @@
 = Ready, Set, Go!
 :page-layout: single
 :page-permalink: /getstarted
-:page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg }
-
-// the following DOES NOT WORK
-//:page-header: { caption: "David Iskander"}
+:page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
 
 
-Photo credit: https://unsplash.com/photos/iWTamkU5kiI[David Iskander]
-
-
-This is a sample page composed in AsciiDoc.
+== This is a sample page composed in AsciiDoc
