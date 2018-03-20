@@ -1,5 +1,5 @@
 ---
-title: "Examples for Docs-As-Code"
+title: "Docs-As-Code by Example"
 layout: single
 permalink: /examples
 header:
@@ -7,7 +7,7 @@ header:
   overlay_filter: "0.0"
   overlay_image: /images/splash/example-435076-unsplash.jpg
   caption: "Photo credit: [**Blake Connally**](https://unsplash.com/photos/IKUYGCFmfw4)"
-excerpt: "Practical Examples."
+excerpt: "Seeing is believing."
 
 ---
 
