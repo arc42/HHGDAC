@@ -1,6 +1,6 @@
 FROM jekyll/builder
 
-LABEL version="0.2.0"
+LABEL version="0.2.1"
 LABEL description="develop and generate documentation sites with AsciiDoctor"
 LABEL vendor="arc42 and docToolChain"
 
