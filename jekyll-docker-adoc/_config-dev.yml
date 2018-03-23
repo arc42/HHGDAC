@@ -12,7 +12,7 @@ theme: minimal-mistakes-jekyll
 locale                   : "en"
 title                    : "HHGDAC"
 title_separator          : "-"
-name                     : "Ralf D. Müller und Gernot Starke "
+name                     : "Ralf D. Müller und Gernot Starke"
 description              : "Hitchhikers Guide to Documentation As Code."
 url                      : "http://localhost" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"

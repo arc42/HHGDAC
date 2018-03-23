@@ -9,7 +9,7 @@ services:
   hhgdac-jekyll:
     build: .
     image: hhgdac-jekyll/0.3
-    command: jekyll serve --trace --host 0.0.0.0 --watch --incremental
+    command: jekyll serve --trace --host 0.0.0.0 --watch 
     environment:
       - JEKYLL_ENV=development
     ports:

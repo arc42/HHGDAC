@@ -8,5 +8,6 @@ gem "minimal-mistakes-jekyll"
 
 group :jekyll_plugins do
   gem 'jekyll-asciidoc'
-  #gem 'asciidoctor-diagram', '~> 1.4.0'
+# TODO: get asciidoctor-diagram to work in container
+# gem 'asciidoctor-diagram', '~> 1.4.0'
 end
