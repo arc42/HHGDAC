@@ -1,0 +1,28 @@
+= image:../hhgdac-logo.png[] Folge 10: Websites mit AsciiDoc und Jekyll
+
+[small]
+--
+Source und Infos zur JavaMagazin-Kolumne von
+https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
+--
+
+Diesmal geht es darum, Websites mit Hilfe von AsciiDoc und Jekyll
+zu generieren.
+
+== Vereinfachung build.gradle
+Wir haben für diese Folge wieder einen default-task für Gradle vorbereitet:
+
+    cd folge-10
+    ./gradlew
+
+Falls Sie Gradle bereits installiert haben, geht's auch so:
+
+    gradle
+
+
+== Was Sie erwartet...
+
+* Jekyll
+* Docker
+
+== Quellen
