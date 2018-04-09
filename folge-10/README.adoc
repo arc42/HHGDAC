@@ -9,20 +9,21 @@ https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
 Diesmal geht es darum, Websites mit Hilfe von AsciiDoc und Jekyll
 zu generieren.
 
-== Vereinfachung build.gradle
-Wir haben für diese Folge wieder einen default-task für Gradle vorbereitet:
+== Voraussetzungen
 
-    cd folge-10
-    ./gradlew
-
-Falls Sie Gradle bereits installiert haben, geht's auch so:
-
-    gradle
-
+Wir nutzen Docker, damit Sie ohne Installation von Jekyll, Ruby oder ähnlicher
+Infrastruktur direkt loslegen können.
 
 == Was Sie erwartet...
 
-* Jekyll
+Wir generieren eine (statische) Website mit Jekyll, einem Ruby-basierten
+Site-Generator - der _eigentlich_ Markdown als Eingabesprache erwartet. Über
+ein Plugin können wir Jekyll aber leicht beibringen, auch AsciiDoctor zu verstehen:
+
 * Docker
+* Jekyll + diverse Plugins
+* AsciiDoctor
 
 == Quellen
+
+<to be done>
