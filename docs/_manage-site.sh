@@ -26,10 +26,12 @@ echo "which performs incremental builds and listens for file changes."
 echo
 echo "${GREEN}(b)build ${RESET} build the required docker image."
 echo
+echo "${GREEN}(r)emove ${RESET} the running docker container."
+echo
 echo "${RED}(p)production ${RESET} produces the site with production configuration,"
 echo "into ./zz-production-site directory."
 echo
-echo "${GREEN}(u)pload ${RESET} the generated site to $server."
+echo "${RED}(u)pload ${RESET} the generated site to $server."
 echo
 echo "=================================================="
 echo
@@ -49,6 +51,10 @@ case "$choice" in
   d|D|dev|develop) echo "develop, incremental build"
                    docker-compose --file _docker-compose-dev.yml up
                    ;;
+
+  r|R|remove) echo "remove running docker container"
+                  docker-compose --file _docker-compose-dev.yml down
+                  ;;
 
   p|P|production)  echo "create production site"
                    docker-compose --file _docker-compose-prod.yml up
