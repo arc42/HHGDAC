@@ -1,0 +1,3 @@
+Ein Vorteil von Asciidoctor gegenüber Markdown ist, dass AsciiDoctor erweiterbar ist.
+Asciidoc ist auch leichter transformierbar als Markdown.
+

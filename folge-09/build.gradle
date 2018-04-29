@@ -1,0 +1,39 @@
+
+ext {
+    docsDir = new File('./src/docs')
+    reportFile = new File(
+                        project.buildDir,
+                        'report.txt'
+                    )
+}
+task analyzeText (
+        description: 'einfache Textanalyse',
+        group: 'docToolchain',
+        dependsOn: [],
+) {
+    inputs.dir docsDir
+    outputs.files reportFile
+    doLast {
+        def srcFolder = docsDir
+        reportFile.write("Analyse Ergebnis: \n", "UTF-8")
+        srcFolder.eachFile { file ->
+            if (file.name.endsWith('.adoc')) {
+                println "analysiere " + file.name
+                file.text.split("[^a-zA-Zäöü]")
+                        .each { word ->
+                    if (word.endsWith("bar")) {
+                        reportFile.append(
+                            "> Warning: bitte ersetze " +
+                            "'${word}' durch " +
+                            "'es lässt sich " +
+                            "${word - 'bar' + 'en'}' \n",
+                            "UTF-8"
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
+defaultTasks 'analyzeText'
