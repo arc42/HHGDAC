@@ -2,27 +2,41 @@ import org.asciidoctor.gradle.AsciidoctorTask
 
 plugins {
   id "org.asciidoctor.convert" version "1.5.3"
+  id "com.github.ben-manes.versions" version "0.17.0"
 }
+apply plugin: 'groovy'
 
 asciidoctorj {
-    version = '1.5.4'
+  version = '1.5.4'
 }
 dependencies {
-    asciidoctor 'org.asciidoctor:asciidoctorj-diagram:1.5.4.1'
+  asciidoctor 'org.asciidoctor:asciidoctorj-pdf:1.5.0-alpha.15'
+  // carefull!
+  // asciidoctor 1.5.6 needs diagram 1.5.4.1
+  // but then reveal.js is broken...
+  // https://github.com/asciidoctor/asciidoctor-diagram/issues/161
+  asciidoctor 'org.asciidoctor:asciidoctorj-diagram:1.5.4.1'
 }
 
-
-          
-  sourceDir = file("src/docs/")
-
+// common settings for asciidoctor
+// this is needed for PDF generation with plantUML
+tasks.withType(AsciidoctorTask) { docTask ->
+  sourceDir = new File ("$projectDir/src/docs")
+  sources {
+      include 'master.adoc'
+  }
+  attributes (
+          'source-highlighter': 'coderay',
+          toc: 'left',
+          icons: 'font',
+          sectlink: true,
+          sectanchors: true,
+          numbered: true
+  )
   // good to see what the build is doing...
   logDocuments = true
 
   requires = ['asciidoctor-diagram']
-
-  sources {
-      include "folge-5.adoc"
-   }
 
 }
 
@@ -30,15 +44,23 @@ task generateHTML (
         type: AsciidoctorTask,
         group: 'docToolchain',
         description: 'use html5 as asciidoc backend') {
-
+  attributes (
+          plantUMLDir: ''
+  )
   backends = ['html5']
 }
 
 task generatePDF (
         type: AsciidoctorTask,
+        group: 'docToolchain',
         description: 'use pdf as asciidoc backend') {
 
+  attributes (
+    'pdf-style': 'custom',
+    'pdf-stylesdir': 'config/pdfTheme',
+    plantUMLDir: buildDir.canonicalPath+'/asciidoc/pdf/images/plantUML/'
+  )
   backends = ['pdf']
 }
 
-defaultTasks 'clean', 'generateHTML', 'generatePDF'
+defaultTasks 'generateHTML', 'generatePDF', 'convertToDocx'

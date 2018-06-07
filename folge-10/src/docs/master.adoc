@@ -1,0 +1,45 @@
+:Title: AsciiDoc PDF-Rendering Demo
+:Subtitle: ein Beispiel
+:Author: Dr. Gernot Starke & Ralf Müller
+:Revision: rev 16.04.2018
+:imagesdir: images
+
+:show-link-uri:
+
+= generatePDF
+
+Mit `asciidoctor-pdf` ist das Generieren eines PDFs kein Problem.
+
+Die Kunst besteht darin, alle Features richtig zu konfigurieren.
+Dies betrifft vorallem das Zusammenspiel der asciidoctor-Plugins, also `asciidoctor-diagram`im Speziellen.
+
+[plantuml, {plantUMLDir}test2, png]
+----
+a->b
+----
+
+[plantuml, {plantUMLDir}test3, png]
+----
+component a
+component b
+a -> b
+----
+
+<<<<
+
+== Links
+
+Auch links verhalten sich bezüglich der Darstellung im PDF etwas anders als im HTML, den in einem gedruckten PDF lässt sich schlecht auf einen http://docs-as-co.de[Link] klicken.
+
+== Seitenumbrüche
+
+Seitenumbrüche lassen sich jederzeit durch `<<<<` einfügen. Diese werden für PDFs wie auch für DocBook und somit Word berücksichtigt.
+Aber auch im HTML werden sie unsichtbar eingebaut. Beim Druck des HTML-Dokuments kommen sie dann zum Vorschein.
+
+<<<<
+
+== Unterkapitel
+
+Die Modularisierung Ihrer Dokumente wird natürlich weiterhin berücksichtigt.
+
+include::kapitel/kapitel-1.adoc[leveloffset=1]

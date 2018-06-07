@@ -68,9 +68,11 @@ Sourcecode in Dokumentation, Syntax-Highlighting, Code direkt aus dem Repo inklu
 === Folge-8: https://github.com/arc42/HHGDAC/tree/master/folge-8[Tools]
 Einige Werkzeuge, die wir (Ralf + Gernot) zum arbeiten mit AsciiDoc für Sie ausprobiert haben.
 
-=== Folge-9: lassen Sie sich überraschen
+=== Folge-9: build magie
 
-=== Folge-10: Websites mit AsciiDoctor, Jekyll und Docker
+=== Folge-10: https://github.com/arc42/HHGDAC/tree/master/folge-10[PDF]
+
+=== Folge-11: Websites mit AsciiDoctor, Jekyll und Docker
 
 
 == Links und weitere Infos
