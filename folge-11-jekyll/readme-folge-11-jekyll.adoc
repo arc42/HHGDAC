@@ -1,0 +1,167 @@
+= image:../hhgdac-logo.png[] Folge 10: Websites mit AsciiDoctor und Jekyll
+
+[small]
+--
+Sources und Infos zur JavaMagazin-Kolumne von
+https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
+--
+
+
+== Was Sie erwartet...
+
+
+* Wir zeigen Ihnen, wie Sie statische Websites mit Hilfe von AsciiDoc
+und dem berühmten Site-Generator <<Jekyll>> erstellen und pflegen können.
+Jekyll selbst verwendet standardmässig Markdown als Auszeichnungssprache,
+für AsciiDoc müssen wir ein klein wenig nachhelfen.
+
+* Da Jekyll auf Ruby basiert und eine ziemliche Menge weiterer Abhängigkeiten
+mit sich schleppt, empfehlen wir Ihnen die ersten Schritte auf Basis
+eines <<jekyll-mit-docker, Docker-Containers>> zu gehen - mit Hilfe eines kleinen Skriptes
+haben wir die Einstiegshürde (hoffentlich) ziemlich niedrig gehalten.
+
+* Github verwendet Jekyll als Generator für die _Github-Pages_, allerdings
+können Sie dafür (Stand März 2018) nur Markdown verwenden. Indirekt klappt's dann
+aber doch - wir erklären das an einem <<jekyll-ghpages-adoc, Beispiel>>.
+
+
+
+== Jekyll
+image:images/jekyll-logo-light-transparent.png[width=100]
+ist ein https://jekyllrb.com[Site Generator], in Ruby programmiert.
+
+Seine über 33000 Github-Sterne sprechen ihre eigene Sprache, dabei
+versucht Jekyll, Ihnen als Content-Autor möglichst aus dem Weg zu gehen.
+Die Autoren fassen diese https://jekyllrb.com[Philosphie] in den kurzen Statements
+zusammen:
+
+* No Magic
+* It “Just Works”
+* Content is King
+* Stability
+* Small & Extensible
+
+Ursprünglich hat übrigens https://en.wikipedia.org/wiki/Tom_Preston-Werner[Tom Preston-Werner],
+einer der Gründer von Github, dieses feine Stückchen Software geschrieben. Seit Februar 2018
+hat https://liv.cat[Olivia Hugger] die Rolle der Lead-Developerin übernommen.
+
+[small]#Anmerkung Gernot: Ich bin bei Jekyll etwas parteiisch,
+weil ich die Websites von http://arc42.org[arc42.org],
+http://docs.arc42.org[docs.arc42.org], http://faq.arc42.org[faq.arc42.org],
+http://patterns.arc42.org[patterns.arc42.org]
+sowie http://aim42.org[aim42.org] und http://esabuch.de[esabuch.de]
+mit Jekylls Hilfe pflege. Das sind insgesamt
+fast 300 Seiten Content, die seit Jahren zuverlässig aus Git-Repositories heraus
+stabil publiziert werden.#
+
+=== Themes
+Jekyll verwendet zum Styling von Websites so genannte Themes, die Autoren unabhängig
+vom eigentlichen Kern des Generators erstellen oder wählen können. Wir haben
+für diese Folge das flexible und leistungsfähige Theme
+https://mmistakes.github.io/minimal-mistakes/[_Minimal Mistakes_] ausgewählt,
+das beispielsweise die Grundlage für http://arc42.org[arc42.org]
+und http://aim42.org[aim42.org] bildet. Sie sind bei Themes allerdings frei in
+Ihrer Wahl.
+
+In der Literaturliste weiter unten
+finden Sie eine Auswahl an <<jeky-theme-sites, Websites für Jekyll-Themes>> (viele kostenfreie,
+teilweise auch kommerzielle).
+
+=== Plugins
+Sie können Jekyll durch so genannte Plugins um diverse Funktionen
+erweitern, unter anderem für AsciiDoctor (normalerweise verwendet
+  Jekyll ja Markdown).
+
+Weitere Bereiche, in denen Plugins die Möglichkeiten von Jekyll erweitern können,
+sind Suchfunktionen, i18n, Tagging, Paginierung und
+https://github.com/planetjekyll/awesome-jekyll-plugins[viele andere].
+
+Eine gute Einführung bietet auch die
+https://jekyllrb.com/docs/plugins/[Original-Jekyll Doku zu Plugins].
+
+Für unserer Ziel, Websites mit Jekyll und AsciiDoc zu schreiben,
+müssen Sie das AsciiDoc-Plugin in der Datei '_config.yml'
+bekannt machen - und zwar in der Plugin-Sektion:
+
+[source,yml]
+----
+  # Plugins
+  plugins:
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-gist
+    - jekyll-feed
+    - jekyll-asciidoc<1>
+----
+<1> Diese Zeile ist entscheidend!
+
+=== Installation und Abhängigkeiten
+Statt einer Anleitung zur Installation möchten wir auf mögliche Tücken bei
+der Installation hinweisen. Die Jekyll-Versionen sind teilweise von konkreten
+Ruby-Versionen abhängig. Das können Sie mit 'rvm' zwar managen, allerdings handeln
+Sie sich damit zusätzliche Komplexität ein.
+
+Jekyll-Plugins bestehen aus Ruby-Code, manchmal ergänzt um css/JavaScript
+und oder HTML. Jekyll-Themes enthalten in der Regel nur JavaScript, css und
+HTML/Markdown Templates, sind allerdings von konkreten Ruby-Gems abhängig.
+
+Sie ahnen schon - hier droht eine _dependency hell_, vor der wir Sie
+gerne schützen möchten - daher schlagen wir die Nutzung von Docker-Containern
+für Jekyll vor.
+
+[small]#Anmerkung Ralf: Wir verwenden Linux-basierte Docker-Container,
+die unter auf Windows-basierten Host-Systemen manchmal etwas Ärger
+bereiten... eventuell stellt in solchen Fällen doch die alte _Virtualisierung_
+die geschickte Variante dar.#
+
+
+
+[[jekyll-mit-docker]]
+== Jekyll mit Docker
+
+== PlantUML
+
+siehe https://github.com/asciidoctor/jekyll-asciidoc#enabling-asciidoctor-diagram
+
+
+[[jekyll-ghpages-adoc]]
+== Jekyll, Github-Pages und AsciiDoc
+
+Stand Mai 2018 unterstützt Github leider keine github-pages mit AsciiDoc,
+so dass Sie entweder die generierte Site per ftp zu einem Webserver hochladen
+müssen, oder Sie verwenden beispielsweise:
+
+* Einen CI-Service (wie Travis CI)
+* Einen auf Site-Generierung und -Hosting spezialisierten Dienst wie
+https://www.netlify.com/[Netlify]
+
+== Quellen und Links
+
+[[jekyll-theme-sites]]
+=== Jekyll-Themes
+Den meisten Theme-Sammlungen für Jekyll mangelt es an Suchmöglichkeiten oder
+entsprechender Struktur. Wir haben uns 2016 bei der Suche nach einem Theme
+für arc42.org und aim42.org intensiv mit diversen dieser Themes auseinandergesetzt,
+und unser damaliger Favorit _MinimalMistakes_ von Michael Rose würde auch heute
+noch in Führung liegen.
+
+* http://jekyllthemes.org[jekyllthemes.org] von Matt Harzewski. Über 300 Themes. Etwas
+unübersichtlich, keine Suchkriterien.
+* http://themes.jekyllrc.org[themes.jekyllrc.org]. Ein Fork der von jekyllthemes.org,
+mit leicht modifiziertem Aufbau.
+* https://jekyllthemes.io[jekyllthemes.io]. Enthält freie und kommerzielle Themes, leider
+ebenfalls nicht gut strukturiert.
+* https://drjekyllthemes.github.io[Dr. Jekyll Themes], über 220 Themes, mit Stichworten und Links.
+
+
+=== Beispiele für Sites mit AsciiDoc und Jekyll
+
+* Die (übrigens wirklich interessante) ArchUnit Library generiert
+ihre https://www.archunit.org/[archunit.org] Site mit Jekyll.
+Darin enthalten ist ein umfangreicher
+User-Guide, der vollständig in AsciiDoc geschrieben ist:
+https://www.archunit.org/
+
+* Rabea Gransberger hat im September 2017 einen https://rgra.github.io/[Blog]
+zur Koexistenz von Jekyll und AsciiDoctor geschrieben (und uns damit
+  auf die Idee für diese Folge der Kolumne gebracht): https://rgra.github.io/

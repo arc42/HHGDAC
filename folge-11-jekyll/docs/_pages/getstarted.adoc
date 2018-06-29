@@ -1,0 +1,21 @@
+= Ready, Set, Go!
+:page-layout: single
+:page-permalink: /getstarted
+:page-header: { overlay_image: /images/splash/get-started-599118-unsplash.jpg, caption: "[David Iskander](https://unsplash.com/photos/iWTamkU5kiI)" }
+
+
+== This is a sample page composed in AsciiDoc
+
+we didn't get diagrams to work
+
+//[plantuml]
+//....
+//class BlockProcessor
+//class DiagramBlock
+//class arc42Block
+//class PlantUmlBlock
+//
+//BlockProcessor <|-- DiagramBlock
+//DiagramBlock <|-- arc42Block
+//DiagramBlock <|-- PlantUmlBlock
+//....

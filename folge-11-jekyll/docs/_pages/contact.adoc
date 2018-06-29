@@ -1,0 +1,20 @@
+= Contact us - we're listening!
+:page-layout: single
+:page-permalink: /contact
+:page-header: { overlay_image: /images/splash/unsplash-contact-pavan-trikutam.jpg, caption: "[**Pavan Trikutam**](https://unsplash.com/collections/389099/contact?photo=71CjSSB83Wo)" }
+:icons: font
+:page-liquid: true
+
+
+You have several options to contact us:
+
+* Via Email: icon:envelope[] mailto:info@arc42.org[info-at-arc42-dot-org]
+
+* https://github.com/arc42/HHGDAC/issues[issue tracker], located at
+https://github.com/arc42/hhgdac/issues.
+* On our Twitter accounts:
+** https://twitter.com/docToolchain[@docToolchain]
+** https://twitter.com/RalfDMueller[ @RalfDMueller]
+
+
+Please see our link:/imprint[Imprint + Privacy Statement].
