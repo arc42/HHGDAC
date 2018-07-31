@@ -37,7 +37,8 @@ tasks.withType(AsciidoctorTask) { docTask ->
           'source-highlighter': 'coderay',
           'toc': 'left',
           'icons': 'font',
-          'sourceDir': "$projectDir/src/"
+          'sourceDir': "$projectDir/src/",
+          'fullWidth': "scaledwidth=17cm, width=100%"
 
   // good to see what the build is doing...
   logDocuments = true

@@ -8,3 +8,19 @@ Und Bilder sind auch fein, besonders mit schönen Bildunterschriften:
 
 .Module unserer Dokumentation
 image::uebersicht.png[]
+
+Um Bilder immer über die volle Breite des Dokuments darzustellen, die Breite über die Paramter `width` und `scalewidth` setzen:
+
+    image::uebersicht_small.png[{fullWidth}]
+
+Das zieht selbst viel zu kleine Bilder auf die volle Breite...
+
+image::uebersicht_small.png[{fullWidth}]
+
+...und zu große Bilder werden eben verkleinert
+
+image::uebersicht_large.png[{fullWidth}]
+
+Das funktioniert so für HTML (`width=100%`), PDF und DOCX (`scalewidth=17cm`).
+
+Siehe auch https://rdmueller.github.io/asciidoc-image-size/ 
