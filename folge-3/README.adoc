@@ -3,7 +3,9 @@
 [small]
 --
 Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller]
-und http://gernotstarke.de[G. Starke]
+und http://gernotstarke.de[G. Starke] 
+
+https://jaxenter.de/docs-as-code-65644[Folge 3: So verwandeln Sie AsciiDoc in PDF, DOCX, Confluence und EPUB]
 --
 
 Wir zeigen, wie Sie (neben html) auch pdf, docx, confluence, epub
