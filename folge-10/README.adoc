@@ -1,0 +1,14 @@
+= image:../hhgdac-logo.png[] Folge-10: PDF-Ausgabe
+
+[small]
+--
+Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller]
+und http://gernotstarke.de[G. Starke]
+
+https://jaxenter.de/hitchhikers-guide-docs-code-pdf-output-72950[Folge 10: PDF-Output]
+
+--
+
+Dieses beispiel zeigt nochmal im Detail, wie Sie mit asciidoctor und dem asciidoctor-pdf-Plugin recht einfach gut aussehnde PDF-Dokumente generieren k�nnen.
+
+Mehr Details im generierten Dokument :-)

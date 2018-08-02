@@ -1,0 +1,11 @@
+= image:../hhgdac-logo.png[] Folge 9: Build-Magie
+
+[small]
+--
+Sources und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
+
+https://jaxenter.de/hitchhikers-guide-docs-code-build-magie-71454[Folge 9: Build-Magie]
+
+--
+
+Wir erklären ein paar nützliche Gradle-Features.

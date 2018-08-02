@@ -3,6 +3,9 @@
 [small]
 --
 Sources und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
+
+https://jaxenter.de/hitchhikers-guide-to-docs-as-code-tools-fuer-asciidoc-asciidoctor-70828[Folge 8: Tools für AsciiDoc/Asciidoctor]
+
 --
 
 == Build

@@ -4,6 +4,8 @@
 --
 Source und Infos zur JavaMagazin-Kolumne von
 https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
+
+https://jaxenter.de/hitchhikers-guide-docs-code-diagramme-66357[Folge 5: Diagramme, aber richtig…]
 --
 
 Diesmal geht es um Bilder und Diagramme, mit/ohne Bildunterschriften,

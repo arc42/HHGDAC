@@ -3,6 +3,8 @@
 [small]
 --
 Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
+
+https://jaxenter.de/the-beautiful-code-69008[Folge 7: The Beautiful Code]
 --
 
 

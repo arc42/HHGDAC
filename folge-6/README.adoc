@@ -1,0 +1,11 @@
+= image:../hhgdac-logo.png[] Folge 6: Bilder, Teil-2
+
+[small]
+--
+Source und Infos zur JavaMagazin-Kolumne von
+https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
+
+https://jaxenter.de/docs-to-code-doctoolchain-67524[Folge 6: Diagramme, jetzt wird modelliert!]
+--
+
+Die Fortsetzung - weiterführende Themen zu Diagrammen und Bildern.
