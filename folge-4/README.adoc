@@ -3,6 +3,9 @@
 [small]
 --
 Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
+
+https://jaxenter.de/asciidoc-features-66027[Folge 4: AsciiDoc-Features für Pragmatisches]
+
 --
 
 Wir zeigen diejenigen AsciiDoc-Features, die unserer Meinung
