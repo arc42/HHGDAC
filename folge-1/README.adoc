@@ -3,6 +3,8 @@
 [small]
 --
 Source und Infos zur JavaMagazin-Kolumne von https://rdmueller.github.io/[R.D. Müller] und http://gernotstarke.de[G. Starke]
+
+https://jaxenter.de/docs-as-code-asciidoctor-62432[Folge 1: Hitchhiker’s Guide to Docs as Code]
 --
 
 Wir möchten Dokumentation in der Softwareentwicklung von vielerlei typischen Schmerzen befreien:

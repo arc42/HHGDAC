@@ -5,6 +5,9 @@
 Source und Infos zur JavaMagazin-Kolumne von
 https://rdmueller.github.io/[R.D. Müller] und
 http://gernotstarke.de[G. Starke]
+
+https://jaxenter.de/documentation-modularisierung-63743[Folge 2: Modulare Dokumentationen: Wie man sie baut und warum sie die Teamarbeit erleichtern]
+
 --
 
 
